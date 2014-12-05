@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="invoicedetail"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="269"
+		 pageHeight="396"
+		 columnWidth="269"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Invoice"
+		isDefault="true"
+		fontName="Courier New"
+		fontSize="8"
+		pdfFontName="Courier"
+	>
+	</style>
+
+	<parameter name="NOMOR_INVOICE" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="TANGGAL_INVOICE" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT 
+  CASE WHEN (dt.berat>0) THEN CONCAT(m.nama,' (x',dt.jumlah,')') ELSE m.nama END AS nama,
+  CASE WHEN (dt.berat>0) THEN dt.berat ELSE dt.jumlah END AS jumlah,
+  dt.harga,
+  dt.berat
+FROM detiltransaksi dt 
+INNER JOIN menu m ON dt.menu = m.menu 
+WHERE dt.nomor = $P{NOMOR_INVOICE} AND dt.tanggal = $P{TANGGAL_INVOICE}]]></queryString>
+
+	<field name="nama" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Double"/>
+	<field name="harga" class="java.lang.Float"/>
+	<field name="berat" class="java.lang.Float"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="12"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="180"
+						y="1"
+						width="55"
+						height="10"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[new java.lang.Float(  ($F{jumlah}.floatValue()) *($F{harga}.floatValue()) )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="122"
+						y="1"
+						width="52"
+						height="10"
+						key="textField-2"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[$F{harga}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="96"
+						y="1"
+						width="24"
+						height="10"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="5"
+						y="1"
+						width="88"
+						height="10"
+						key="textField-4"/>
+					<box></box>
+					<textElement verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

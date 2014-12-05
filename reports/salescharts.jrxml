@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="salescharts"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="SalesChart"
+		isDefault="true"
+	>
+	</style>
+
+	<parameter name="RESTOBIZ_COMPANY" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Resto Business"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_BUSINESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Restourant"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_ADDRESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Jl. G. Merapi 48 Samarinda"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_PHONE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["(0541) 9113812, 08195401930"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TANGGAL_AWAL" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="TANGGAL_AKHIR" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT
+  t.tanggal,
+  SUM(CASE WHEN (dt.berat>0) THEN (dt.berat*(dt.harga-dt.diskon+dt.pajak)) ELSE (dt.jumlah*(dt.harga-dt.diskon+dt.pajak)) END) AS total
+FROM detiltransaksi dt
+INNER JOIN transaksi t
+  ON dt.nomor = t.nomor AND dt.tanggal = t.tanggal
+WHERE
+  t.tanggal BETWEEN $P{TANGGAL_AWAL} AND $P{TANGGAL_AKHIR}
+GROUP BY 
+  t.tanggal
+ORDER BY
+  t.tanggal]]></queryString>
+
+	<field name="tanggal" class="java.sql.Date"/>
+	<field name="total" class="java.lang.Double"/>
+
+	<variable name="TOTAL_PENJUALAN" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{total}]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="110"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="SalesChart"
+						x="0"
+						y="38"
+						width="270"
+						height="18"
+						key="textField-6"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="Courier-Bold" size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_COMPANY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="SalesChart"
+						x="0"
+						y="20"
+						width="270"
+						height="18"
+						key="textField-7"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_BUSINESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="SalesChart"
+						x="0"
+						y="56"
+						width="270"
+						height="18"
+						key="textField-8"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="SalesChart"
+						x="0"
+						y="74"
+						width="270"
+						height="14"
+						key="textField-9"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_PHONE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="SalesChart"
+						x="320"
+						y="40"
+						width="215"
+						height="40"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TOTAL PENJUALAN]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="35"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						style="SalesChart"
+						x="117"
+						y="26"
+						width="300"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						style="SalesChart"
+						x="127"
+						y="5"
+						width="280"
+						height="20"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Tabel Penjualan]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="15"  isSplitAllowed="true" >
+				<elementGroup><!--  Start: 1 !-->
+				<elementGroup><!--  Start: 1.2 !-->
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="305"
+						y="0"
+						width="102"
+						height="14"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{total}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="SalesChart"
+						x="127"
+						y="0"
+						width="102"
+						height="14"
+						key="textField-4"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{tanggal}]]></textFieldExpression>
+				</textField>
+				</elementGroup><!-- End 1.2 !-->
+				</elementGroup><!-- End 1 !-->
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="17"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="9"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="262"  isSplitAllowed="true" >
+				<bar3DChart>
+					<chart  hyperlinkTarget="Self" >
+					<reportElement
+						x="43"
+						y="42"
+						width="448"
+						height="210"
+						key="element-1"/>
+					<box></box>
+						<chartTitle color="#000000" >
+								<titleExpression><![CDATA["Grafik Penjualan"]]></titleExpression>
+					</chartTitle>
+						<chartLegend textColor="#000000" backgroundColor="#FFFFFF" >
+					</chartLegend>
+					</chart>
+					<categoryDataset>
+						<dataset >
+						</dataset>
+						<categorySeries>
+							<seriesExpression><![CDATA["Total Penjualan"]]></seriesExpression>
+							<categoryExpression><![CDATA[new SimpleDateFormat("dd/MMM/yy").format($F{tanggal})]]></categoryExpression>
+							<valueExpression><![CDATA[$F{total}]]></valueExpression>
+				<itemHyperlink >
+				</itemHyperlink>
+						</categorySeries>
+					</categoryDataset>
+					<bar3DPlot >
+						<plot />
+						<categoryAxisFormat>
+							<axisFormat >
+							</axisFormat>
+						</categoryAxisFormat>
+						<valueAxisFormat>
+							<axisFormat >
+							</axisFormat>
+						</valueAxisFormat>
+					</bar3DPlot>
+				</bar3DChart>
+				<line direction="TopDown">
+					<reportElement
+						style="SalesChart"
+						x="117"
+						y="5"
+						width="300"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="SalesChart"
+						x="305"
+						y="9"
+						width="102"
+						height="14"
+						key="textField-5"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{TOTAL_PENJUALAN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="SalesChart"
+						x="127"
+						y="9"
+						width="102"
+						height="14"
+						key="staticText-2"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TOTAL]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>

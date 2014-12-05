@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="RestobizPU" transaction-type="RESOURCE_LOCAL">
+    <provider>oracle.toplink.essentials.PersistenceProvider</provider>
+    <class>com.indragunawan.restobiz.app.entity.Skema</class>
+    <class>com.indragunawan.restobiz.app.entity.JenisBayar</class>
+    <class>com.indragunawan.restobiz.app.entity.HakAkses</class>
+    <class>com.indragunawan.restobiz.app.entity.Kebijakan</class>
+    <class>com.indragunawan.restobiz.app.entity.Transaksi</class>
+    <class>com.indragunawan.restobiz.app.entity.Konfigurasi</class>
+    <class>com.indragunawan.restobiz.app.entity.Operator</class>
+    <class>com.indragunawan.restobiz.app.entity.Menu</class>
+    <class>com.indragunawan.restobiz.app.entity.DetilTransaksi</class>
+    <class>com.indragunawan.restobiz.app.entity.Pembayaran</class>
+    <class>com.indragunawan.restobiz.app.entity.Kas</class>
+    <properties>
+      <property name="toplink.jdbc.user" value="restobiz"/>
+      <property name="toplink.jdbc.password" value="admin"/>
+      <property name="toplink.jdbc.url" value="jdbc:mysql://localhost:3306/restobiz"/>
+      <property name="toplink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+    </properties>
+  </persistence-unit>
+</persistence>

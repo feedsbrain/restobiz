@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="jenisBayarPopup">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="jenisBayarPopup" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="hapusMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteJenisPembayaran" methodName="deleteJenisPembayaran"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="hapusMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="userGroupPopup">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="userGroupPopup" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="hapusUserGroup">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteUserGroup" methodName="deleteUserGroup"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="hapusUserGroup" noResource="true"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="skemaPopup">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="skemaPopup" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="hapusSkema">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteUserPrivilages" methodName="deleteUserPrivilages"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="hapusSkema" noResource="true"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="userPopup">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="userPopup" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="hapusUser">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteUserLogin" methodName="deleteUserLogin"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="hapusUser" noResource="true"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" resourceKey="restobizKonfigurasi.title"/>
+    <Property name="name" type="java.lang.String" value="restobizKonfigurasi" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowActivated" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowActivated"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="headerPanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="footerPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="contentPanel" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="headerPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="contentPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="footerPanel" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="headerPanel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" resourceKey="headerPanel.background"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="headerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                          <Component id="subJudulLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="judulLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="437" max="32767" attributes="0"/>
+                          <Component id="imageLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="imageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="judulLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="subJudulLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="13" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="judulLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="judulLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="judulLabel.text"/>
+            <Property name="name" type="java.lang.String" value="judulLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="subJudulLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="subJudulLabel.text"/>
+            <Property name="name" type="java.lang.String" value="subJudulLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="imageLabel">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="imageLabel.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="imageLabel.text"/>
+            <Property name="name" type="java.lang.String" value="imageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="footerPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="footerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="516" max="32767" attributes="0"/>
+                  <Component id="simpanButton" linkSize="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="batalButton" linkSize="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="batalButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="simpanButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="batalButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="closeKonfigurasiView" methodName="closeKonfigurasiView"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="84"/>
+            <Property name="text" type="java.lang.String" resourceKey="batalButton.text"/>
+            <Property name="name" type="java.lang.String" value="batalButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="batalButtonKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="simpanButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="saveKonfigurasi" methodName="saveKonfigurasi"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="83"/>
+            <Property name="text" type="java.lang.String" resourceKey="simpanButton.text"/>
+            <Property name="name" type="java.lang.String" value="simpanButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="simpanButtonKeyPressed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="contentPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="contentPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="contentTabbedPanel" alignment="0" pref="640" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="contentTabbedPanel" alignment="0" pref="343" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JTabbedPane" name="contentTabbedPanel">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="contentTabbedPanel" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="contentTabbedPanelStateChanged"/>
+          </Events>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="generalPanel">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="generalPanel" noResource="true"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="General">
+                    <Property name="tabTitle" type="java.lang.String" resourceKey="generalPanel.TabConstraints.tabTitle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="catatanPanel" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="transaksiPanel" max="32767" attributes="2"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="kuitansiPanel" min="-2" max="-2" attributes="2"/>
+                                      </Group>
+                                      <Component id="konfigurasiUmumPanel" max="32767" attributes="2"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="nomorKasPanel" max="32767" attributes="1"/>
+                                      <Component id="komponenHargaPanel" alignment="0" max="32767" attributes="2"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="komponenHargaPanel" max="32767" attributes="2"/>
+                              <Component id="konfigurasiUmumPanel" alignment="0" max="32767" attributes="2"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="kuitansiPanel" alignment="0" max="32767" attributes="3"/>
+                              <Component id="nomorKasPanel" alignment="0" max="32767" attributes="3"/>
+                              <Component id="transaksiPanel" alignment="0" min="-2" max="-2" attributes="3"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="catatanPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="kuitansiPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Kuitansi (Receipt)">
+                          <Property name="titleX" resourceKey="kuitansiPanel.border.title"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="kuitansiPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="nomorKuitansiLabel" alignment="1" pref="196" max="32767" attributes="1"/>
+                                  <Component id="nomorKuitansiField" alignment="0" pref="196" max="32767" attributes="2"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="nomorKuitansiLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="nomorKuitansiField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="nomorKuitansiField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="name" type="java.lang.String" value="nomorKuitansiField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="nomorKuitansiLabel">
+                      <Properties>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="nomorKuitansiField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="nomorKuitansiLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="nomorKuitansiLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="komponenHargaPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Komponen Harga">
+                          <Property name="titleX" resourceKey="komponenHargaPanel.border.title"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="komponenHargaPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="discountField" alignment="0" pref="147" max="32767" attributes="3"/>
+                                  <Component id="discountLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pajakLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pajakField" alignment="1" pref="147" max="32767" attributes="1"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="discountLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="discountField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pajakLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pajakField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="pajakLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="80"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="pajakField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="pajakLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="pajakLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="pajakField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="pajakField.text"/>
+                        <Property name="name" type="java.lang.String" value="pajakField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="discountField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="discountField.text"/>
+                        <Property name="name" type="java.lang.String" value="discountField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="discountLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="68"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="discountField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="discountLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="discountLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="konfigurasiUmumPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Konfigurasi Umum">
+                          <Property name="titleX" resourceKey="konfigurasiUmumPanel.border.title"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="konfigurasiUmumPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jumlahShiftField" alignment="0" pref="383" max="32767" attributes="0"/>
+                                  <Component id="jumlahShiftLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lokasiReportLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="lokasiReportField" pref="326" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="browseButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jumlahShiftLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jumlahShiftField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lokasiReportLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="browseButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lokasiReportField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jumlahShiftLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="104"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="jumlahShiftField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="jumlahShiftLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="jumlahShiftLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jumlahShiftField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="jumlahShiftField.text"/>
+                        <Property name="name" type="java.lang.String" value="jumlahShiftField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lokasiReportLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="82"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="lokasiReportField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="lokasiReportLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="lokasiReportLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="lokasiReportField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="lokasiReportField.text"/>
+                        <Property name="name" type="java.lang.String" value="lokasiReportField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="browseButton">
+                      <Properties>
+                        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                          <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="browseReportLocation" methodName="browseReportLocation"/>
+                        </Property>
+                        <Property name="mnemonic" type="int" value="66"/>
+                        <Property name="text" type="java.lang.String" resourceKey="browseButton.text"/>
+                        <Property name="name" type="java.lang.String" value="browseButton" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="browseButtonKeyPressed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="nomorKasPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Nomor Kas">
+                          <Property name="titleX" resourceKey="nomorKasPanel.border.title"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="nomorKasPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="nomorKasField" alignment="0" pref="147" max="32767" attributes="2"/>
+                                  <Component id="nomorKasLabel" alignment="0" pref="147" max="32767" attributes="1"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="nomorKasLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="nomorKasField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="nomorKasField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="name" type="java.lang.String" value="nomorKasField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="nomorKasLabel">
+                      <Properties>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="nomorKasField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="nomorKasLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="nomorKasLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="transaksiPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Transaksi (Invoice)">
+                          <Property name="titleX" resourceKey="transaksiPanel.border.title"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="transaksiPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="nomorTransaksiLabel" alignment="0" pref="145" max="32767" attributes="1"/>
+                                  <Component id="nomorTransaksiField" alignment="0" pref="145" max="32767" attributes="2"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="nomorTransaksiLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="nomorTransaksiField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="nomorTransaksiLabel">
+                      <Properties>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="nomorTransaksiField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="nomorTransaksiLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="nomorTransaksiLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="nomorTransaksiField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="text" type="java.lang.String" resourceKey="nomorTransaksiField.text"/>
+                        <Property name="name" type="java.lang.String" value="nomorTransaksiField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="catatanPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="catatanPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="catatanLabel" pref="580" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
+                              <Component id="catatanLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="catatanLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="catatanLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="catatanLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="perusahaanPanel">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="perusahaanPanel" noResource="true"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Perusahaan">
+                    <Property name="tabTitle" type="java.lang.String" resourceKey="perusahaanPanel.TabConstraints.tabTitle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="informasiPerusahaanPanel" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="informasiPerusahaanPanel" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="informasiPerusahaanPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Informasi Perusahaan">
+                          <Property name="titleX" resourceKey="informasiPerusahaanPanel.border.title"/>
+                        </TitledBorder>
+                      </Border>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="informasiPerusahaanPanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="perusahaanField" alignment="0" pref="572" max="32767" attributes="0"/>
+                                  <Component id="perusahaanLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jenisUsahaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jenisUsahaField" alignment="0" pref="572" max="32767" attributes="0"/>
+                                  <Component id="alamatLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="alamatField" alignment="0" pref="572" max="32767" attributes="0"/>
+                                  <Component id="teleponLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="teleponField" alignment="0" pref="572" max="32767" attributes="0"/>
+                                  <Component id="pesanPromosiLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pesanPromosiField" alignment="0" pref="572" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="perusahaanLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="perusahaanField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jenisUsahaLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jenisUsahaField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="alamatLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="alamatField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="teleponLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="teleponField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pesanPromosiLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="pesanPromosiField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="15" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="perusahaanLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="80"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="perusahaanField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="perusahaanLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="perusahaanLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="perusahaanField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="perusahaanField.text"/>
+                        <Property name="name" type="java.lang.String" value="perusahaanField" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="perusahaanFieldKeyPressed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jenisUsahaLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="85"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="jenisUsahaField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="jenisUsahaLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="jenisUsahaLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jenisUsahaField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="jenisUsahaField.text"/>
+                        <Property name="name" type="java.lang.String" value="jenisUsahaField" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jenisUsahaFieldKeyPressed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="alamatLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="65"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="alamatField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="alamatLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="alamatLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="alamatField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="alamatField.text"/>
+                        <Property name="name" type="java.lang.String" value="alamatField" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="alamatFieldKeyPressed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="teleponLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="70"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="teleponField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="teleponLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="teleponLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="teleponField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="teleponField.text"/>
+                        <Property name="name" type="java.lang.String" value="teleponField" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="teleponFieldKeyPressed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="pesanPromosiLabel">
+                      <Properties>
+                        <Property name="displayedMnemonic" type="int" value="101"/>
+                        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                          <ComponentRef name="pesanPromosiField"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" resourceKey="pesanPromosiLabel.text"/>
+                        <Property name="name" type="java.lang.String" value="pesanPromosiLabel" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="pesanPromosiField">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" resourceKey="pesanPromosiField.text"/>
+                        <Property name="name" type="java.lang.String" value="pesanPromosiField" noResource="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="caraBayarPanel">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="caraBayarPanel" noResource="true"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Pembayaran">
+                    <Property name="tabTitle" type="java.lang.String" resourceKey="caraBayarPanel.TabConstraints.tabTitle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jenisBayarScrollPane" alignment="0" pref="608" max="32767" attributes="0"/>
+                              <Component id="jenisLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jenisField" min="-2" pref="198" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="negasiCheckBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="tambahJenisBayarButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="hapusButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="jenisLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jenisField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="negasiCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tambahJenisBayarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Component id="jenisBayarScrollPane" pref="199" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="hapusButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JScrollPane" name="jenisBayarScrollPane">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="jenisBayarScrollPane" noResource="true"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="jenisBayarTable">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="2" rowCount="0">
+                            <Column editable="true" title="Jenis" type="java.lang.String"/>
+                            <Column editable="true" title="Negasi" type="java.lang.Boolean"/>
+                          </Table>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title resourceKey="jenisBayarTable.columnModel.title0"/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="50" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title resourceKey="jenisBayarTable.columnModel.title1"/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                          </TableColumnModel>
+                        </Property>
+                        <Property name="name" type="java.lang.String" value="jenisBayarTable" noResource="true"/>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jenisBayarTableMouseClicked"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="jenisLabel">
+                  <Properties>
+                    <Property name="displayedMnemonic" type="int" value="74"/>
+                    <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="jenisField"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" resourceKey="jenisLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="jenisLabel" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jenisField">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="jenisField.text"/>
+                    <Property name="name" type="java.lang.String" value="jenisField" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jenisFieldKeyPressed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="negasiCheckBox">
+                  <Properties>
+                    <Property name="mnemonic" type="int" value="78"/>
+                    <Property name="text" type="java.lang.String" resourceKey="negasiCheckBox.text"/>
+                    <Property name="name" type="java.lang.String" value="negasiCheckBox" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="negasiCheckBoxKeyPressed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="tambahJenisBayarButton">
+                  <Properties>
+                    <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                      <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="addJenisPembayaran" methodName="addJenisPembayaran"/>
+                    </Property>
+                    <Property name="mnemonic" type="int" value="84"/>
+                    <Property name="text" type="java.lang.String" resourceKey="tambahJenisBayarButton.text"/>
+                    <Property name="name" type="java.lang.String" value="tambahJenisBayarButton" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tambahJenisBayarButtonKeyPressed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="hapusButton">
+                  <Properties>
+                    <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                      <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteJenisPembayaran" methodName="deleteJenisPembayaran"/>
+                    </Property>
+                    <Property name="mnemonic" type="int" value="72"/>
+                    <Property name="text" type="java.lang.String" resourceKey="hapusButton.text"/>
+                    <Property name="name" type="java.lang.String" value="hapusButton" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hapusButtonKeyPressed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="operatorPanel">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="operatorPanel" noResource="true"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Operator">
+                    <Property name="tabTitle" type="java.lang.String" resourceKey="operatorPanel.TabConstraints.tabTitle"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="schemeTabbedPanel" pref="608" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="schemeTabbedPanel" pref="285" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JTabbedPane" name="schemeTabbedPanel">
+                  <Properties>
+                    <Property name="tabPlacement" type="int" value="2"/>
+                    <Property name="name" type="java.lang.String" value="schemeTabbedPanel" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="schemeTabbedPanelStateChanged"/>
+                  </Events>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="userPanel">
+                      <Properties>
+                        <Property name="name" type="java.lang.String" value="userPanel" noResource="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                          <JTabbedPaneConstraints tabName="User">
+                            <Property name="tabTitle" type="java.lang.String" resourceKey="userPanel.TabConstraints.tabTitle"/>
+                          </JTabbedPaneConstraints>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="operatorScrollPane" alignment="0" pref="524" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="passwordLabel" linkSize="4" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="passwordField" min="-2" pref="125" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="hakAksesLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="namaUserText" linkSize="4" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="namaUserField" min="-2" pref="125" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="namaAsliLabel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="hakAksesField" pref="180" max="32767" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="tambahUserButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="namaAsliField" pref="240" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="hapusUserButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="namaUserText" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="namaUserField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="namaAsliLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="namaAsliField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="passwordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hakAksesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tambahUserButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hakAksesField" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="passwordField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="operatorScrollPane" pref="159" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="hapusUserButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JScrollPane" name="operatorScrollPane">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="operatorScrollPane" noResource="true"/>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="operatorTable">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="3" rowCount="0">
+                                    <Column editable="true" title="Nama User" type="java.lang.String"/>
+                                    <Column editable="true" title="Nama Asli" type="java.lang.String"/>
+                                    <Column editable="true" title="Hak Akses" type="java.lang.String"/>
+                                  </Table>
+                                </Property>
+                                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                  <TableColumnModel selectionModel="0">
+                                    <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title resourceKey="jenisBayarTable.columnModel.title0"/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title resourceKey="jenisBayarTable.columnModel.title1"/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title resourceKey="operatorTable.columnModel.title2"/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                  </TableColumnModel>
+                                </Property>
+                                <Property name="name" type="java.lang.String" value="operatorTable" noResource="true"/>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="operatorTableMouseClicked"/>
+                              </Events>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JLabel" name="namaUserText">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="78"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="namaUserField"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="namaUserText.text"/>
+                            <Property name="name" type="java.lang.String" value="namaUserText" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="namaUserField">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" resourceKey="namaUserField.text"/>
+                            <Property name="name" type="java.lang.String" value="namaUserField" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="namaUserFieldKeyPressed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="namaAsliLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="108"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="namaAsliField"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="namaAsliLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="namaAsliLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="namaAsliField">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" resourceKey="namaAsliField.text"/>
+                            <Property name="name" type="java.lang.String" value="namaAsliField" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="namaAsliFieldKeyPressed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="passwordLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="80"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="passwordField"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="passwordLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="passwordLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JPasswordField" name="passwordField">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" resourceKey="passwordField.text"/>
+                            <Property name="name" type="java.lang.String" value="passwordField" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="hakAksesLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="107"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="hakAksesField"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="hakAksesLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="hakAksesLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="hakAksesField">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" resourceKey="hakAksesField.background"/>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="hakAksesField" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hakAksesFieldKeyPressed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="tambahUserButton">
+                          <Properties>
+                            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="addOperator" methodName="addOperator"/>
+                            </Property>
+                            <Property name="mnemonic" type="int" value="84"/>
+                            <Property name="text" type="java.lang.String" resourceKey="tambahUserButton.text"/>
+                            <Property name="name" type="java.lang.String" value="tambahUserButton" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tambahUserButtonKeyPressed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="hapusUserButton">
+                          <Properties>
+                            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteUserLogin" methodName="deleteUserLogin"/>
+                            </Property>
+                            <Property name="mnemonic" type="int" value="72"/>
+                            <Property name="text" type="java.lang.String" resourceKey="hapusUserButton.text"/>
+                            <Property name="name" type="java.lang.String" value="hapusUserButton" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hapusUserButtonKeyPressed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="groupPanel">
+                      <Properties>
+                        <Property name="name" type="java.lang.String" value="groupPanel" noResource="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                          <JTabbedPaneConstraints tabName="Group">
+                            <Property name="tabTitle" type="java.lang.String" resourceKey="groupPanel.TabConstraints.tabTitle"/>
+                          </JTabbedPaneConstraints>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="tambahGroupField" pref="198" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="tambahGroupButton" linkSize="5" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="hapusGroupButton" linkSize="5" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="userGroupScrollPane" pref="318" max="32767" attributes="0"/>
+                                      <Component id="userGroupLabel" alignment="0" pref="318" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="systemGroupLabel" max="32767" attributes="1"/>
+                                      <Component id="systemGroupScrollPane" alignment="0" pref="194" max="32767" attributes="1"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userGroupLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="systemGroupLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="userGroupScrollPane" pref="203" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="hapusGroupButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tambahGroupButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tambahGroupField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="systemGroupScrollPane" pref="233" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JScrollPane" name="userGroupScrollPane">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="userGroupScrollPane" noResource="true"/>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JList" name="userGroupList">
+                              <Properties>
+                                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                                  <StringArray count="0"/>
+                                </Property>
+                                <Property name="selectionMode" type="int" value="0"/>
+                                <Property name="name" type="java.lang.String" value="userGroupList" noResource="true"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="userGroupListMouseClicked"/>
+                                <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="userGroupListValueChanged"/>
+                              </Events>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Container class="javax.swing.JScrollPane" name="systemGroupScrollPane">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="systemGroupScrollPane" noResource="true"/>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JList" name="systemGroupList">
+                              <Properties>
+                                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                                  <StringArray count="0"/>
+                                </Property>
+                                <Property name="selectionMode" type="int" value="0"/>
+                                <Property name="name" type="java.lang.String" value="systemGroupList" noResource="true"/>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JLabel" name="systemGroupLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="71"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="systemGroupList"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="systemGroupLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="systemGroupLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="userGroupLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="85"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="userGroupList"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="userGroupLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="userGroupLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="tambahGroupField">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" resourceKey="tambahGroupField.text"/>
+                            <Property name="name" type="java.lang.String" value="tambahGroupField" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="tambahGroupButton">
+                          <Properties>
+                            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="addUserGroup" methodName="addUserGroup"/>
+                            </Property>
+                            <Property name="mnemonic" type="int" value="84"/>
+                            <Property name="text" type="java.lang.String" resourceKey="tambahGroupButton.text"/>
+                            <Property name="name" type="java.lang.String" value="tambahGroupButton" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tambahGroupButtonKeyPressed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="hapusGroupButton">
+                          <Properties>
+                            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteUserGroup" methodName="deleteUserGroup"/>
+                            </Property>
+                            <Property name="mnemonic" type="int" value="72"/>
+                            <Property name="text" type="java.lang.String" resourceKey="hapusGroupButton.text"/>
+                            <Property name="name" type="java.lang.String" value="hapusGroupButton" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hapusGroupButtonKeyPressed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="skemaPanel">
+                      <Properties>
+                        <Property name="name" type="java.lang.String" value="skemaPanel" noResource="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                          <JTabbedPaneConstraints tabName="Skema">
+                            <Property name="tabTitle" type="java.lang.String" resourceKey="skemaPanel.TabConstraints.tabTitle"/>
+                          </JTabbedPaneConstraints>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="skemaScrollPane" alignment="0" pref="524" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="kebijakanLabel" min="-2" max="-2" attributes="0"/>
+                                              <Component id="kebijakanField" pref="310" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="groupField" min="-2" pref="158" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="blockButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="groupLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="hapusSkemaButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="kebijakanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="groupLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="blockButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="groupField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="kebijakanField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="skemaScrollPane" pref="178" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="hapusSkemaButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JScrollPane" name="skemaScrollPane">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="skemaScrollPane" noResource="true"/>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="skemaTable">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="3" rowCount="0">
+                                    <Column editable="true" title="Kebijakan" type="java.lang.String"/>
+                                    <Column editable="true" title="Group" type="java.lang.String"/>
+                                    <Column editable="true" title="Status" type="java.lang.Boolean"/>
+                                  </Table>
+                                </Property>
+                                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                  <TableColumnModel selectionModel="0">
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title resourceKey="skemaTable.columnModel.title0"/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title resourceKey="skemaTable.columnModel.title1"/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title resourceKey="skemaTable.columnModel.title2"/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                  </TableColumnModel>
+                                </Property>
+                                <Property name="name" type="java.lang.String" value="skemaTable" noResource="true"/>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="skemaTableMouseClicked"/>
+                              </Events>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JComboBox" name="kebijakanField">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" resourceKey="kebijakanField.background"/>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[22, 24]"/>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="kebijakanField" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[22, 24]"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="kebijakanLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="75"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="kebijakanField"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="kebijakanLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="kebijakanLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="groupField">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" resourceKey="kebijakanField.background"/>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[22, 24]"/>
+                            </Property>
+                            <Property name="name" type="java.lang.String" value="groupField" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[22, 24]"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="groupLabel">
+                          <Properties>
+                            <Property name="displayedMnemonic" type="int" value="71"/>
+                            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                              <ComponentRef name="groupField"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" resourceKey="groupLabel.text"/>
+                            <Property name="name" type="java.lang.String" value="groupLabel" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="blockButton">
+                          <Properties>
+                            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="blockUserPrivilages" methodName="blockUserPrivilages"/>
+                            </Property>
+                            <Property name="mnemonic" type="int" value="66"/>
+                            <Property name="text" type="java.lang.String" resourceKey="blockButton.text"/>
+                            <Property name="name" type="java.lang.String" value="blockButton" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="blockButtonKeyPressed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="hapusSkemaButton">
+                          <Properties>
+                            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                              <action class="com.indragunawan.restobiz.app.KonfigurasiView" id="deleteUserPrivilages" methodName="deleteUserPrivilages"/>
+                            </Property>
+                            <Property name="mnemonic" type="int" value="72"/>
+                            <Property name="text" type="java.lang.String" resourceKey="hapusSkemaButton.text"/>
+                            <Property name="name" type="java.lang.String" value="hapusSkemaButton" noResource="true"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hapusSkemaButtonKeyPressed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

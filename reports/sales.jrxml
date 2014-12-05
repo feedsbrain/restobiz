@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="sales"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Sales"
+		isDefault="true"
+	>
+	</style>
+
+	<parameter name="RESTOBIZ_BUSINESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Restourant"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_COMPANY" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Resto Business"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_ADDRESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Jl. Merapi 48 Samarinda"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_PHONE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["(0541) 9113812, 08195401930"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TANGGAL_AWAL" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="TANGGAL_AKHIR" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="RENTANG_SHIFT" isForPrompting="false" class="java.util.Collection"/>
+	<queryString><![CDATA[SELECT
+     t.nomor,
+     t.tanggal,
+     t.customer,     
+     t.shift,
+     sum(CASE WHEN (dt.berat>0) THEN (dt.berat * dt.harga) ELSE (dt.jumlah * dt.harga) END) as jumlah,
+     sum(CASE WHEN (dt.berat>0) THEN (dt.berat * dt.diskon) ELSE (dt.jumlah * dt.diskon) END) as diskon,
+     sum(CASE WHEN (dt.berat>0) THEN (dt.berat * dt.pajak) ELSE (dt.jumlah * dt.pajak) END) as pajak,
+     sum(CASE WHEN (dt.berat>0) THEN (dt.berat * (dt.harga-dt.diskon+dt.pajak)) ELSE (dt.jumlah * (dt.harga-dt.diskon+dt.pajak)) END) as total
+FROM
+     transaksi t INNER JOIN detiltransaksi dt 
+	ON t.nomor = dt.nomor
+	AND t.tanggal = dt.tanggal
+WHERE
+     t.tanggal BETWEEN $P{TANGGAL_AWAL} AND $P{TANGGAL_AKHIR}
+GROUP BY
+     t.tanggal, t.nomor, t.customer
+ORDER BY
+     t.tanggal, t.nomor, t.customer]]></queryString>
+
+	<field name="nomor" class="java.lang.Integer"/>
+	<field name="tanggal" class="java.sql.Date"/>
+	<field name="customer" class="java.lang.String"/>
+	<field name="shift" class="java.lang.Integer"/>
+	<field name="jumlah" class="java.lang.Double"/>
+	<field name="diskon" class="java.lang.Double"/>
+	<field name="pajak" class="java.lang.Double"/>
+	<field name="total" class="java.lang.Double"/>
+
+	<variable name="TOTAL_SUMMARY" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{total}]]></variableExpression>
+	</variable>
+	<variable name="TRANSAKSI_SUMMARY" class="java.lang.Integer" resetType="Report" calculation="Count">
+		<variableExpression><![CDATA[$F{nomor}]]></variableExpression>
+	</variable>
+	<variable name="JUMLAH_SUMMARY" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{jumlah}]]></variableExpression>
+	</variable>
+	<variable name="DISKON_SUMMARY" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{diskon}]]></variableExpression>
+	</variable>
+	<variable name="VAT_SUMMARY" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{pajak}]]></variableExpression>
+	</variable>
+	<filterExpression><![CDATA[Boolean.valueOf($P{RENTANG_SHIFT}.contains($F{shift}))]]></filterExpression>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="87"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Sales"
+						x="0"
+						y="46"
+						width="0"
+						height="0"
+						key="staticText-11"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[Static Text]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="0"
+						y="28"
+						width="310"
+						height="18"
+						key="textField-19"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="Courier-Bold" size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_COMPANY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="0"
+						y="10"
+						width="310"
+						height="18"
+						key="textField-20"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_BUSINESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="0"
+						y="46"
+						width="310"
+						height="18"
+						key="textField-21"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="0"
+						y="64"
+						width="310"
+						height="14"
+						key="textField-22"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_PHONE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Sales"
+						x="365"
+						y="23"
+						width="170"
+						height="40"
+						key="staticText-12"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[LAPORAN TRANSAKSI]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="20"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Sales"
+						x="430"
+						y="3"
+						width="40"
+						height="14"
+						key="staticText-9"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Halaman]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="470"
+						y="3"
+						width="20"
+						height="14"
+						key="textField-17"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Sales"
+						x="490"
+						y="3"
+						width="25"
+						height="14"
+						key="staticText-10"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[dari]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="515"
+						y="3"
+						width="20"
+						height="14"
+						key="textField-18"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="24"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="2"
+						width="70"
+						height="20"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Tanggal]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="21"
+						width="535"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						x="70"
+						y="2"
+						width="50"
+						height="20"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Invoice]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="120"
+						y="2"
+						width="150"
+						height="20"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Customer]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="270"
+						y="2"
+						width="60"
+						height="20"
+						key="staticText-4"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Jumlah]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="330"
+						y="2"
+						width="61"
+						height="20"
+						key="staticText-5"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Diskon]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="391"
+						y="2"
+						width="60"
+						height="20"
+						key="staticText-6"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[PHR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="451"
+						y="2"
+						width="84"
+						height="20"
+						key="staticText-7"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Total]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="0"
+						width="535"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="14"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="0000" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="70"
+						y="0"
+						width="50"
+						height="14"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{nomor}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="70"
+						height="14"
+						key="textField-2"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{tanggal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="120"
+						y="0"
+						width="150"
+						height="14"
+						key="textField-3"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{customer}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="270"
+						y="0"
+						width="60"
+						height="14"
+						key="textField-4"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="330"
+						y="0"
+						width="61"
+						height="14"
+						key="textField-5"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{diskon}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="391"
+						y="0"
+						width="60"
+						height="14"
+						key="textField-6"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{pajak}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="451"
+						y="0"
+						width="84"
+						height="14"
+						key="textField-7"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{total}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="30"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="50"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="451"
+						y="7"
+						width="84"
+						height="14"
+						key="textField-12"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{TOTAL_SUMMARY}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						style="Sales"
+						x="0"
+						y="2"
+						width="535"
+						height="0"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="0"
+						y="7"
+						width="190"
+						height="14"
+						key="textField-13"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Total: "+(new DecimalFormat("#,##0").format($V{TRANSAKSI_SUMMARY}))+" transaksi"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="270"
+						y="7"
+						width="60"
+						height="14"
+						key="textField-14"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{JUMLAH_SUMMARY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="330"
+						y="7"
+						width="61"
+						height="14"
+						key="textField-15"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{DISKON_SUMMARY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Sales"
+						x="391"
+						y="7"
+						width="60"
+						height="14"
+						key="textField-16"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{VAT_SUMMARY}]]></textFieldExpression>
+				</textField>
+			</band>
+		</summary>
+</jasperReport>

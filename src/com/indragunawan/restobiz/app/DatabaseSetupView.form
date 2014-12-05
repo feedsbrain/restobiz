@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" resourceKey="databaseSetup.title"/>
+    <Property name="name" type="java.lang.String" value="databaseSetup" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="headerPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="contentPanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="footerPanel" alignment="1" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="headerPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="contentPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="footerPanel" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="contentPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Database">
+              <Property name="titleX" resourceKey="contentPanel.border.title"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="contentPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="serverField" min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="serverLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="portLabel" min="-2" max="-2" attributes="1"/>
+                              <Component id="portField" alignment="0" pref="84" max="32767" attributes="1"/>
+                          </Group>
+                      </Group>
+                      <Component id="catalogLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="catalogField" alignment="0" pref="264" max="32767" attributes="0"/>
+                      <Component id="userLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="userField" alignment="0" pref="264" max="32767" attributes="0"/>
+                      <Component id="passwordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="passwordField" alignment="0" pref="264" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="serverLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="portLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="serverField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="portField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="catalogLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="catalogField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="userLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="userField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="passwordLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="passwordField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="serverLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="101"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="serverField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="serverLabel.text"/>
+            <Property name="name" type="java.lang.String" value="serverLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="catalogLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="67"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="catalogField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="catalogLabel.text"/>
+            <Property name="name" type="java.lang.String" value="catalogLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="userLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="85"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="userField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="userLabel.text"/>
+            <Property name="name" type="java.lang.String" value="userLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="serverField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="serverField.text"/>
+            <Property name="name" type="java.lang.String" value="serverField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="serverFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="catalogField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="catalogField.text"/>
+            <Property name="name" type="java.lang.String" value="catalogField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="catalogFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="userField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="userField.text"/>
+            <Property name="name" type="java.lang.String" value="userField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="userFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="passwordLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="80"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="passwordField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="passwordLabel.text"/>
+            <Property name="name" type="java.lang.String" value="passwordLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="passwordField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="passwordField.text"/>
+            <Property name="name" type="java.lang.String" value="passwordField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="passwordFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="portField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="portField.text"/>
+            <Property name="name" type="java.lang.String" value="portField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="portFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="portLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="111"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="portField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="portLabel.text"/>
+            <Property name="name" type="java.lang.String" value="portLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="headerPanel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" resourceKey="headerPanel.background"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="headerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="headerLabel" pref="207" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="headerImageLabel" min="-2" pref="47" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="headerLabel" alignment="0" max="32767" attributes="1"/>
+                      <Component id="headerImageLabel" alignment="0" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="headerLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="headerLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="headerLabel.text"/>
+            <Property name="name" type="java.lang.String" value="headerLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="headerImageLabel">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="headerImageLabel.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="headerImageLabel.text"/>
+            <Property name="name" type="java.lang.String" value="headerImageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="footerPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="footerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="176" max="32767" attributes="0"/>
+                  <Component id="saveButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="closeButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="closeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="saveButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.DatabaseSetupView" id="saveDBConfig" methodName="saveDBConfig"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="83"/>
+            <Property name="text" type="java.lang.String" resourceKey="saveButton.text"/>
+            <Property name="name" type="java.lang.String" value="saveButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="saveButtonKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="closeButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.DatabaseSetupView" id="closeDBConfig" methodName="closeDBConfig"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="84"/>
+            <Property name="text" type="java.lang.String" resourceKey="closeButton.text"/>
+            <Property name="name" type="java.lang.String" value="closeButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="closeButtonKeyPressed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

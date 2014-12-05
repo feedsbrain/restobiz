@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" resourceKey="laporanTop10.title"/>
+    <Property name="name" type="java.lang.String" value="laporanTop10" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="kriteriaPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="159" max="32767" attributes="0"/>
+              <Component id="okButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="batalButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="kriteriaPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="batalButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="okButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="13" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="kriteriaPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Kriteria Laporan">
+              <Property name="titleX" resourceKey="kriteriaPanel.border.title"/>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="kriteriaPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="tanggalAkhirLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="tanggalAkhirField" alignment="0" pref="191" max="32767" attributes="0"/>
+                      <Component id="tanggalAwalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="kelompokLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="kelompokField" alignment="0" pref="191" max="32767" attributes="0"/>
+                      <Component id="tanggalAwalField" alignment="1" pref="191" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Component id="tanggalAwalLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tanggalAwalField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tanggalAkhirLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tanggalAkhirField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="kelompokLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="kelompokField" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tanggalAwalLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="84"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="tanggalAwalField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="tanggalAwalLabel.text"/>
+            <Property name="name" type="java.lang.String" value="tanggalAwalLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="tanggalAwalField">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="tanggalAwalField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="tanggalAkhirLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="97"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="tanggalAkhirField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="tanggalAkhirLabel.text"/>
+            <Property name="name" type="java.lang.String" value="tanggalAkhirLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="tanggalAkhirField">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="tanggalAkhirField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="kelompokField">
+          <Properties>
+            <Property name="background" type="java.awt.Color" resourceKey="kelompokField.background"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="1">
+                <StringItem index="0" value="KELOMPOK"/>
+              </StringArray>
+            </Property>
+            <Property name="name" type="java.lang.String" value="kelompokField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="kelompokLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="75"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="kelompokField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="kelompokLabel.text"/>
+            <Property name="name" type="java.lang.String" value="kelompokLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="batalButton">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="com.indragunawan.restobiz.app.KriteriaTop10" id="closeKriteriaLaporan" methodName="closeKriteriaLaporan"/>
+        </Property>
+        <Property name="mnemonic" type="int" value="66"/>
+        <Property name="text" type="java.lang.String" resourceKey="batalButton.text"/>
+        <Property name="name" type="java.lang.String" value="batalButton" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="batalButtonKeyPressed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="okButton">
+      <Properties>
+        <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+          <action class="com.indragunawan.restobiz.app.KriteriaTop10" id="setKriteriaLaporan" methodName="setKriteriaLaporan"/>
+        </Property>
+        <Property name="mnemonic" type="int" value="79"/>
+        <Property name="text" type="java.lang.String" resourceKey="okButton.text"/>
+        <Property name="name" type="java.lang.String" value="okButton" noResource="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="okButtonKeyPressed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

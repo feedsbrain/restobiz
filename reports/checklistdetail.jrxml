@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="checklistdetail"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="269"
+		 pageHeight="396"
+		 columnWidth="269"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Invoice"
+		isDefault="true"
+		fontName="Courier New"
+		fontSize="8"
+		pdfFontName="Courier"
+	>
+	</style>
+
+	<parameter name="NOMOR_INVOICE" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="TANGGAL_INVOICE" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[select 
+	dt.*, 
+	m.nama 
+from detiltransaksi dt 
+inner join menu m on dt.menu = m.menu 
+where dt.nomor = $P{NOMOR_INVOICE} and dt.tanggal = $P{TANGGAL_INVOICE}]]></queryString>
+
+	<field name="nomor" class="java.lang.Integer"/>
+	<field name="tanggal" class="java.sql.Date"/>
+	<field name="menu" class="java.lang.Integer"/>
+	<field name="jumlah" class="java.lang.Float"/>
+	<field name="harga" class="java.lang.Float"/>
+	<field name="diskon" class="java.lang.Float"/>
+	<field name="pajak" class="java.lang.Float"/>
+	<field name="namauser" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="12"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="134"
+						y="1"
+						width="30"
+						height="10"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="5"
+						y="1"
+						width="107"
+						height="10"
+						key="textField-4"/>
+					<box></box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement
+						style="Invoice"
+						x="209"
+						y="1"
+						width="14"
+						height="10"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

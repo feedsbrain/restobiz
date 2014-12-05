@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="mainPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="mainPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="restobizToolBar" alignment="0" pref="800" max="32767" attributes="0"/>
+              <Component id="backgroundImageLabel" alignment="0" pref="800" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="restobizToolBar" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="backgroundImageLabel" pref="508" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JToolBar" name="restobizToolBar">
+          <Properties>
+            <Property name="rollover" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="restobizToolBar" noResource="true"/>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="transaksiToolButton">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showTransaksi" methodName="showTransaksi"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="transaksiToolButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="transaksiToolButton.text"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+                <Property name="name" type="java.lang.String" value="transaksiToolButton" noResource="true"/>
+                <Property name="verticalTextPosition" type="int" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="kasHarianToolBar">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showKasHarian" methodName="showKasHarian"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="kasHarianToolBar.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="kasHarianToolBar.text"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+                <Property name="name" type="java.lang.String" value="kasHarianToolBar" noResource="true"/>
+                <Property name="verticalTextPosition" type="int" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="kasHarianToolSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="kasHarianToolSeparator" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="menuToolBar">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showMenuEdit" methodName="showMenuEdit"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="menuToolBar.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="menuToolBar.text"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+                <Property name="name" type="java.lang.String" value="menuToolBar" noResource="true"/>
+                <Property name="verticalTextPosition" type="int" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="passwordToolButton">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showGantiPasswordView" methodName="showGantiPasswordView"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="passwordToolButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="passwordToolButton.text"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+                <Property name="name" type="java.lang.String" value="passwordToolButton" noResource="true"/>
+                <Property name="verticalTextPosition" type="int" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JToolBar$Separator" name="passwordToolSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="passwordToolSeparator" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="infoToolBar">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showInformation" methodName="showInformation"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="infoToolBar.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="infoToolBar.text"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+                <Property name="name" type="java.lang.String" value="infoToolBar" noResource="true"/>
+                <Property name="verticalTextPosition" type="int" value="3"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="backgroundImageLabel">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="backgroundImageLabel.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="backgroundImageLabel.text"/>
+            <Property name="doubleBuffered" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="backgroundImageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JMenuBar" name="menuBar">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="menuBar" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="fileMenu">
+          <Properties>
+            <Property name="mnemonic" type="int" value="70"/>
+            <Property name="text" type="java.lang.String" resourceKey="fileMenu.text"/>
+            <Property name="name" type="java.lang.String" value="fileMenu" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="transaksiMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showTransaksi" methodName="showTransaksi"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="84"/>
+                <Property name="text" type="java.lang.String" resourceKey="transaksiMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="transaksiMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="kasHarianMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showKasHarian" methodName="showKasHarian"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="75"/>
+                <Property name="text" type="java.lang.String" resourceKey="kasHarianMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="kasHarianMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="kasHarianSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="kasHarianSeparator" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="menuMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showMenuEdit" methodName="showMenuEdit"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="77"/>
+                <Property name="text" type="java.lang.String" resourceKey="menuMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="menuMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="menuSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="menuSeparator" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="logoutMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showLoginDialog" methodName="showLoginDialog"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="76"/>
+                <Property name="name" type="java.lang.String" value="logoutMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="exitMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="org.jdesktop.application.Application" id="quit" methodName="quit"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="120"/>
+                <Property name="name" type="java.lang.String" value="exitMenuItem" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="laporanMenu">
+          <Properties>
+            <Property name="mnemonic" type="int" value="76"/>
+            <Property name="text" type="java.lang.String" resourceKey="laporanMenu.text"/>
+            <Property name="name" type="java.lang.String" value="laporanMenu" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="daftarMenuMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="printDaftarMenu" methodName="printDaftarMenu"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="77"/>
+                <Property name="text" type="java.lang.String" resourceKey="daftarMenuMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="daftarMenuMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="daftarMenuSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="daftarMenuSeparator" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="laporanTransaksiMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showLaporanTransaksi" methodName="showLaporanTransaksi"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="84"/>
+                <Property name="text" type="java.lang.String" resourceKey="laporanTransaksiMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="laporanTransaksiMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="laporanKasMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showLaporanKas" methodName="showLaporanKas"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="75"/>
+                <Property name="text" type="java.lang.String" resourceKey="laporanKasMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="laporanKasMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="laporanKasSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="laporanKasSeparator" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="rekapPenjualanMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showLaporanPenjualan" methodName="showLaporanPenjualan"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="80"/>
+                <Property name="text" type="java.lang.String" resourceKey="rekapPenjualanMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="rekapPenjualanMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="top10MenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showTop10Penjualan" methodName="showTop10Penjualan"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="111"/>
+                <Property name="text" type="java.lang.String" resourceKey="top10MenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="top10MenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="toolsMenu">
+          <Properties>
+            <Property name="mnemonic" type="int" value="84"/>
+            <Property name="text" type="java.lang.String" resourceKey="toolsMenu.text"/>
+            <Property name="name" type="java.lang.String" value="toolsMenu" noResource="true"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="databaseMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showDBSetup" methodName="showDBSetup"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="68"/>
+                <Property name="text" type="java.lang.String" resourceKey="databaseMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="databaseMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="konfigurasiMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showKonfigurasi" methodName="showKonfigurasi"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="75"/>
+                <Property name="text" type="java.lang.String" resourceKey="konfigurasiMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="konfigurasiMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="konfigurasiSeparator">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="konfigurasiSeparator" noResource="true"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="passwordMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showGantiPasswordView" methodName="showGantiPasswordView"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="80"/>
+                <Property name="text" type="java.lang.String" resourceKey="passwordMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="passwordMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="helpMenu">
+          <Properties>
+            <Property name="mnemonic" type="int" value="72"/>
+            <Property name="text" type="java.lang.String" resourceKey="helpMenu.text"/>
+            <Property name="name" type="java.lang.String" value="helpMenu" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="aboutMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showAboutBox" methodName="showAboutBox"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="65"/>
+                <Property name="name" type="java.lang.String" value="aboutMenuItem" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+              </AuxValues>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="infoMenuItem">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.MainView" id="showInformation" methodName="showInformation"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="73"/>
+                <Property name="text" type="java.lang.String" resourceKey="infoMenuItem.text"/>
+                <Property name="name" type="java.lang.String" value="infoMenuItem" noResource="true"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="statusPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="statusPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="statusPanelSeparator" alignment="0" pref="800" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="statusMessageLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="616" max="32767" attributes="0"/>
+                  <Component id="progressBar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="statusAnimationLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="statusPanelSeparator" min="-2" pref="2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="statusMessageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="statusAnimationLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="progressBar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JSeparator" name="statusPanelSeparator">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="statusPanelSeparator" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statusMessageLabel">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="statusMessageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="statusAnimationLabel">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="name" type="java.lang.String" value="statusAnimationLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="progressBar">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="progressBar" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="component" type="javax.swing.JComponent" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="mainPanel"/>
+    </Property>
+    <Property name="menuBar" type="javax.swing.JMenuBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="menuBar"/>
+    </Property>
+    <Property name="statusBar" type="javax.swing.JComponent" editor="org.netbeans.modules.form.ComponentChooserEditor">
+      <ComponentRef name="statusPanel"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,70,0,0,3,32"/>
+  </AuxValues>
+</Form>

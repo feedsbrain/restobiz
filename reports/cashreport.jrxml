@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="cashreport"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Cash"
+		isDefault="true"
+	>
+	</style>
+
+	<parameter name="TANGGAL_AWAL" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="TANGGAL_AKHIR" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="RENTANG_SHIFT" isForPrompting="false" class="java.util.Collection"/>
+	<parameter name="RESTOBIZ_COMPANY" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Resto Business"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_BUSINESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Restourant"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_ADDRESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Jl. G. Merapi 48 Samarinda"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_PHONE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["(0541) 9113812, 08195401930"]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT x.* FROM (
+SELECT
+  k.tanggal,
+  k.transaksi,
+  k.kelompok,
+  CASE WHEN k.jumlah < 0 THEN CONCAT('    ', k.keterangan) ELSE k.keterangan END AS keterangan,
+  k.jumlah,
+  k.shift
+FROM
+  kas k
+
+UNION 
+
+SELECT
+  p.dibayar,
+  p.nobukti,
+  "TRANSAKSI" as kelompok,
+  CASE WHEN p.jumlah < 0 THEN CONCAT('    ',p.jenis,' transaksi ',p.nomor,' tanggal ',DATE_FORMAT(p.tanggal, '%d %b %Y')) ELSE CONCAT(p.jenis,' transaksi ',p.nomor,' tanggal ',DATE_FORMAT(p.tanggal, '%d %b %Y')) END AS keterangan,
+  p.jumlah,
+  p.shift
+from
+  pembayaran p
+) x
+WHERE  
+  x.tanggal BETWEEN $P{TANGGAL_AWAL} AND $P{TANGGAL_AKHIR}
+ORDER BY
+  x.tanggal, x.transaksi]]></queryString>
+
+	<field name="tanggal" class="java.sql.Date"/>
+	<field name="transaksi" class="java.lang.Integer"/>
+	<field name="kelompok" class="java.lang.String"/>
+	<field name="keterangan" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Float"/>
+	<field name="shift" class="java.lang.Integer"/>
+
+	<variable name="TOTAL_KAS" class="java.lang.Float" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{jumlah}]]></variableExpression>
+	</variable>
+	<filterExpression><![CDATA[Boolean.valueOf($P{RENTANG_SHIFT}.contains($F{shift}))]]></filterExpression>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="83"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="0"
+						y="43"
+						width="0"
+						height="0"
+						key="staticText-7"/>
+					<box></box>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<text><![CDATA[Static Text]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="0"
+						y="25"
+						width="310"
+						height="18"
+						key="textField-7"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="Courier-Bold" size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_COMPANY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="0"
+						y="7"
+						width="310"
+						height="18"
+						key="textField-8"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_BUSINESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="0"
+						y="43"
+						width="310"
+						height="18"
+						key="textField-9"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="0"
+						y="61"
+						width="310"
+						height="14"
+						key="textField-10"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_PHONE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="365"
+						y="27"
+						width="170"
+						height="40"
+						key="staticText-8"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[LAPORAN KAS]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="20"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="430"
+						y="3"
+						width="40"
+						height="14"
+						key="staticText-9"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Halaman]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="470"
+						y="3"
+						width="20"
+						height="14"
+						key="textField-11"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="490"
+						y="3"
+						width="25"
+						height="14"
+						key="staticText-10"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[dari]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="515"
+						y="3"
+						width="20"
+						height="14"
+						key="textField-12"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="30"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="0"
+						y="6"
+						width="70"
+						height="14"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Tanggal]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						style="Cash"
+						x="0"
+						y="26"
+						width="535"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						style="Cash"
+						x="0"
+						y="0"
+						width="535"
+						height="0"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="70"
+						y="6"
+						width="30"
+						height="14"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TRX]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="100"
+						y="6"
+						width="90"
+						height="14"
+						key="staticText-4"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Kelompok]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="190"
+						y="6"
+						width="270"
+						height="14"
+						key="staticText-5"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Keterangan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="460"
+						y="6"
+						width="75"
+						height="14"
+						key="staticText-6"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Jumlah]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="14"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="70"
+						height="14"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{tanggal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="0000" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="70"
+						y="0"
+						width="30"
+						height="14"
+						key="textField-2"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{transaksi}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="100"
+						y="0"
+						width="90"
+						height="14"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{kelompok}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="190"
+						y="0"
+						width="270"
+						height="14"
+						key="textField-4"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{keterangan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="460"
+						y="0"
+						width="75"
+						height="14"
+						key="textField-5"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="30"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="50"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Cash"
+						x="460"
+						y="6"
+						width="75"
+						height="19"
+						key="textField-6"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[$V{TOTAL_KAS}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						style="Cash"
+						x="0"
+						y="3"
+						width="535"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						style="Cash"
+						x="0"
+						y="6"
+						width="460"
+						height="19"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Total Kas: ]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>

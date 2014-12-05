@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="top10list"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Top10"
+		isDefault="true"
+	>
+	</style>
+
+	<parameter name="RESTOBIZ_BUSINESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Restourant"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_COMPANY" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Resto Business"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_ADDRESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Jl. G. Merapi 48 Samarinda"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_PHONE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["(0541) 9113812, 08195401930"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TANGGAL_AWAL" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="TANGGAL_AKHIR" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="KELOMPOK" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT
+  m.kelompok,
+  m.nama,
+  SUM(dt.jumlah) as jumlah
+FROM
+  detiltransaksi dt
+INNER JOIN
+  menu m
+ON 
+  dt.menu = m.menu
+WHERE 
+  m.kelompok = $P{KELOMPOK}
+  AND dt.tanggal BETWEEN $P{TANGGAL_AWAL} AND $P{TANGGAL_AKHIR}
+GROUP BY
+  m.kelompok, m.nama
+ORDER BY SUM(dt.jumlah) desc
+LIMIT 10]]></queryString>
+
+	<field name="kelompok" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Double"/>
+
+	<variable name="NUMBER_PAGE" class="java.lang.Integer" resetType="Report" calculation="Count">
+		<variableExpression><![CDATA[$V{PAGE_NUMBER}]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="133"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="0"
+						y="48"
+						width="270"
+						height="18"
+						key="textField-6"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" pdfFontName="Courier-Bold" size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_COMPANY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="0"
+						y="30"
+						width="270"
+						height="18"
+						key="textField-7"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_BUSINESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="0"
+						y="66"
+						width="270"
+						height="18"
+						key="textField-8"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="0"
+						y="84"
+						width="270"
+						height="14"
+						key="textField-9"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_PHONE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Top10"
+						x="320"
+						y="50"
+						width="215"
+						height="40"
+						key="staticText-1"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<text><![CDATA[TOP 10 LIST]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="60"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						style="Top10"
+						x="127"
+						y="49"
+						width="281"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="143"
+						y="12"
+						width="249"
+						height="14"
+						key="textField-10"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{KELOMPOK}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="140"
+						y="27"
+						width="122"
+						height="20"
+						key="textField-12"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Top">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse($P{TANGGAL_AWAL})]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="272"
+						y="27"
+						width="122"
+						height="20"
+						key="textField-13"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new SimpleDateFormat("yyyy-MM-dd").parse($P{TANGGAL_AKHIR})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Top10"
+						x="262"
+						y="27"
+						width="10"
+						height="20"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<text><![CDATA[-]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="15"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="159"
+						y="0"
+						width="210"
+						height="14"
+						key="textField-2"/>
+					<box></box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="369"
+						y="0"
+						width="36"
+						height="14"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="129"
+						y="0"
+						width="30"
+						height="14"
+						key="textField-11"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="18"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="16"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="281"  isSplitAllowed="true" >
+				<pie3DChart>
+					<chart  hyperlinkTarget="Self" >
+					<reportElement
+						style="Top10"
+						x="22"
+						y="21"
+						width="490"
+						height="250"
+						key="element-1"/>
+					<box></box>
+						<chartTitle color="#000000" >
+								<titleExpression><![CDATA["Grafik Top 10"]]></titleExpression>
+					</chartTitle>
+						<chartLegend textColor="#000000" backgroundColor="#FFFFFF" >
+					</chartLegend>
+					</chart>
+					<pieDataset>
+						<dataset >
+						</dataset>
+						<keyExpression><![CDATA[$F{nama}]]></keyExpression>
+						<valueExpression><![CDATA[$F{jumlah}]]></valueExpression>
+						<labelExpression><![CDATA[$F{jumlah}.toString()]]></labelExpression>
+				<sectionHyperlink >
+				</sectionHyperlink>
+					</pieDataset>
+					<pie3DPlot >
+						<plot />
+					</pie3DPlot>
+				</pie3DChart>
+				<line direction="TopDown">
+					<reportElement
+						style="Top10"
+						x="127"
+						y="8"
+						width="281"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+			</band>
+		</summary>
+</jasperReport>

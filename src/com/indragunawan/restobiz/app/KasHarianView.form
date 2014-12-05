@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="kasHarianPopup">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="kasHarianPopup" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="hapusMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KasHarianView" id="hapusKasHarian" methodName="hapusKasHarian"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="hapusMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="name" type="java.lang.String" value="kasHarian" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="headerPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="footerPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="contentPanel" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="headerPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="contentPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="footerPanel" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="headerPanel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" resourceKey="headerPanel.background"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="headerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="headerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                          <Component id="subHeaderLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="153" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="tanggalLabel" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="tanggalField" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="shiftLabel" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="shiftField" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="headerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tanggalField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tanggalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="subHeaderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="shiftField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="shiftLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="headerLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="headerLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="headerLabel.text"/>
+            <Property name="name" type="java.lang.String" value="headerLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="subHeaderLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="subHeaderLabel.text"/>
+            <Property name="name" type="java.lang.String" value="subHeaderLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="tanggalLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="tanggalLabel.font"/>
+            <Property name="horizontalAlignment" type="int" value="11"/>
+            <Property name="text" type="java.lang.String" resourceKey="tanggalLabel.text"/>
+            <Property name="name" type="java.lang.String" value="tanggalLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="shiftLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="tanggalLabel.font"/>
+            <Property name="horizontalAlignment" type="int" value="11"/>
+            <Property name="text" type="java.lang.String" resourceKey="shiftLabel.text"/>
+            <Property name="name" type="java.lang.String" value="shiftLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="tanggalField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="tanggalField.text"/>
+            <Property name="name" type="java.lang.String" value="tanggalField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="shiftField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="shiftField.text"/>
+            <Property name="name" type="java.lang.String" value="shiftField" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="contentPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="contentPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="kasHarianScrollPane" alignment="0" pref="577" max="32767" attributes="0"/>
+                      <Component id="controlPanel" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="controlPanel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="kasHarianScrollPane" pref="224" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="controlPanel">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                <EtchetBorder/>
+              </Border>
+            </Property>
+            <Property name="name" type="java.lang.String" value="controlPanel" noResource="true"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="kelompokLabel" pref="57" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="debetLabel" pref="35" max="32767" attributes="0"/>
+                              <EmptySpace min="22" pref="22" max="22" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="debetField" pref="152" max="32767" attributes="1"/>
+                          <Component id="kelompokField" alignment="0" pref="152" max="32767" attributes="1"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="uraianLabel" alignment="0" pref="39" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="kreditLabel" pref="35" max="32767" attributes="0"/>
+                              <EmptySpace min="4" pref="4" max="4" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="uraianField" pref="265" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="kreditField" pref="205" max="32767" attributes="1"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="buttonLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="kelompokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="uraianLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="uraianField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="kelompokField" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="debetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="kreditLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="kreditField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="debetField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="kelompokField">
+              <Properties>
+                <Property name="editable" type="boolean" value="true"/>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="0"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="kelompokField" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="kelompokFieldKeyPressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="kelompokLabel">
+              <Properties>
+                <Property name="displayedMnemonic" type="int" value="101"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="kelompokField"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="kelompokLabel.text"/>
+                <Property name="name" type="java.lang.String" value="kelompokLabel" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="uraianLabel">
+              <Properties>
+                <Property name="displayedMnemonic" type="int" value="85"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="uraianField"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="uraianLabel.text"/>
+                <Property name="name" type="java.lang.String" value="uraianLabel" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="uraianField">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="uraianField.text"/>
+                <Property name="name" type="java.lang.String" value="uraianField" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="uraianFieldKeyPressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="debetLabel">
+              <Properties>
+                <Property name="displayedMnemonic" type="int" value="68"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="debetField"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="debetLabel.text"/>
+                <Property name="name" type="java.lang.String" value="debetLabel" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="debetField">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="debetField.text"/>
+                <Property name="name" type="java.lang.String" value="debetField" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="debetFieldKeyPressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="kreditLabel">
+              <Properties>
+                <Property name="displayedMnemonic" type="int" value="75"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="kreditField"/>
+                </Property>
+                <Property name="text" type="java.lang.String" resourceKey="kreditLabel.text"/>
+                <Property name="name" type="java.lang.String" value="kreditLabel" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="kreditField">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="kreditField.text"/>
+                <Property name="name" type="java.lang.String" value="kreditField" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="kreditFieldKeyPressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="buttonLabel">
+              <Properties>
+                <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+                  <action class="com.indragunawan.restobiz.app.KasHarianView" id="addKasHarian" methodName="addKasHarian"/>
+                </Property>
+                <Property name="mnemonic" type="int" value="97"/>
+                <Property name="text" type="java.lang.String" resourceKey="buttonLabel.text"/>
+                <Property name="name" type="java.lang.String" value="buttonLabel" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="buttonLabelKeyPressed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="kasHarianScrollPane">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="kasHarianScrollPane" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="kasHarianTable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="0">
+                    <Column editable="true" title="Transaksi" type="java.lang.String"/>
+                    <Column editable="true" title="Kelompok" type="java.lang.String"/>
+                    <Column editable="true" title="Uraian" type="java.lang.String"/>
+                    <Column editable="true" title="Jumlah" type="java.lang.Double"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="kasHarianTable.columnModel.title0"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="200" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="kasHarianTable.columnModel.title1"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="kasHarianTable.columnModel.title2"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="200" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="kasHarianTable.columnModel.title3"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="name" type="java.lang.String" value="kasHarianTable" noResource="true"/>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="kasHarianTableMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="footerPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="footerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="hapusButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="493" max="32767" attributes="0"/>
+                  <Component id="tutupButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tutupButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="hapusButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="tutupButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KasHarianView" id="closeKasHarian" methodName="closeKasHarian"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="84"/>
+            <Property name="text" type="java.lang.String" resourceKey="tutupButton.text"/>
+            <Property name="name" type="java.lang.String" value="tutupButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tutupButtonKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="hapusButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.KasHarianView" id="deleteKasHarian" methodName="deleteKasHarian"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="72"/>
+            <Property name="text" type="java.lang.String" resourceKey="hapusButton.text"/>
+            <Property name="name" type="java.lang.String" value="hapusButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hapusButtonKeyPressed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

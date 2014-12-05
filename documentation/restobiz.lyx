@@ -1,0 +1,2480 @@
+#LyX 1.6.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass book
+\use_default_options false
+\language bahasa
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Restobiz : Resto Business
+\end_layout
+
+\begin_layout Author
+Indra Gunawan
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Pendahuluan
+\end_layout
+
+\begin_layout Section
+Tentang Restobiz
+\end_layout
+
+\begin_layout Paragraph
+Restobiz adalah freeware (aplikasi gratis) untuk membantu mengelola usaha
+ restoran anda.
+ Pada awalnya Restobiz dikembangkan secara khusus untuk Taman Hidangan 
+\begin_inset Quotes sld
+\end_inset
+
+Godhong Gedhang
+\begin_inset Quotes srd
+\end_inset
+
+ di Samarinda, Kalimantan Timur.
+ Namun dengan pertimbangan agar aplikasi ini dapat digunakan secara meluas,
+ akhirnya beberapa bagian aplikasi ini distandarkan agar mencangkup kebutuhan
+ restoran-restoran lain pada umumnya.
+\end_layout
+
+\begin_layout Paragraph
+Mengapa aplikasi ini gratis? Apakah anda hanya mendapat versi trial atau
+ demo? Jawabannya 
+\begin_inset Quotes sld
+\end_inset
+
+tidak
+\begin_inset Quotes srd
+\end_inset
+
+, anda mendapat versi 
+\begin_inset Quotes sld
+\end_inset
+
+full
+\begin_inset Quotes srd
+\end_inset
+
+ dari aplikasi ini.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Restobiz gratis karena memang dibuat dengan bahasa pemrograman, tool (IDE)
+ dan pustaka (library) yang gratis.
+ Restobiz dibuat dengan bahasa pemrograman Java yang dapat berjalan di berbagai
+ sistem operasi seperti FreeBSD, Linux
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Linux mengacu pada seluruh sistem operasi yang berbasis pada GNU/Linux.
+\end_layout
+
+\end_inset
+
+, MacOS (OSX), Solaris dan Windows.
+ Java merupakan bahasa pemrograman yang free, IDE NetBeans yang digunakan
+ untuk membangun aplikasi ini juga free.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Seluruh merk dagang yang disebutkan adalah hak cipta dari pemiliknya masing-masi
+ng.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Jika anda menggunakan aplikasi free semacam ini, anda yang menentukan sendiri
+ apakah anda ingin berpartisipasi dalam pengembangan aplikasi ini dengan
+ memberikan sumbangan (donasi) untuk developer atau tidak.
+ Jika anda memutuskan untuk memberikan donasi kepada developer, maka donasi
+ yang anda keluarkan adalah untuk jasa developer dan biaya distribusi aplikasi
+ ini saja, bukan untuk aplikasinya itu sendiri.
+ Ingat, 
+\begin_inset Quotes sld
+\end_inset
+
+Anda membayar jasa developer bukan softwarenya
+\begin_inset Quotes srd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Anda lebih dihargai sebagai end-user karena anda hanya mengeluarkan biaya
+ yang anda kehendaki.
+ Jika anda tidak puas dengan aplikasi ini, anda bahkan tidak kehilangan
+ apa pun karena developer hanya menerima sumbangan jika manfaat aplikasi
+ ini telah anda peroleh.
+\end_layout
+
+\begin_layout Paragraph
+Selain free aplikasi Restobiz juga legal untuk digunakan dimanapun.
+ Anda tidak perlu khawatir, bahkan anda diperbolehkan menyalin dan mendistribusi
+kan kembali aplikasi ini dengan bebas.
+ Dan hal tersebut tidak akan menyalahi aturan lisensi seperti yang biasa
+ ditemukan di aplikasi-aplikasi komersil yang terdapat dipasaran.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Fitur-Fitur Restobiz
+\end_layout
+
+\begin_layout Paragraph
+Restobiz memiliki semua fitur standar yang diperlukan untuk mengelola restoran
+ anda, seperti:
+\end_layout
+
+\begin_layout Enumerate
+Daftar Menu 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Penambahan Menu
+\end_layout
+
+\begin_layout Enumerate
+Perubahan Harga Menu
+\end_layout
+
+\begin_layout Enumerate
+Pencetakan Menu
+\end_layout
+
+\begin_layout Enumerate
+Penonaktifan Menu
+\end_layout
+
+\begin_layout Enumerate
+Item Non-Pajak
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Input Transaksi
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pencetakan Ceklist
+\end_layout
+
+\begin_layout Enumerate
+Pencetakan Invoice
+\end_layout
+
+\begin_layout Enumerate
+Pengaturan Shift
+\end_layout
+
+\begin_layout Enumerate
+Ganti Customer (Pindah Meja)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Input Kas Harian
+\end_layout
+
+\begin_layout Enumerate
+Laporan-Laporan
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Laporan Transaksi (Total, Diskon, Pajak)
+\end_layout
+
+\begin_layout Enumerate
+Laporan Jurnal Kas (Harian & Periode)
+\end_layout
+
+\begin_layout Enumerate
+Laporan Penjualan & Grafik
+\end_layout
+
+\begin_layout Enumerate
+Laporan Top 10 Penjualan & Grafik
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Konfigurasi
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pengaturan Jumlah Shift
+\end_layout
+
+\begin_layout Enumerate
+Pengaturan Diskon dan PPN/PHR
+\end_layout
+
+\begin_layout Enumerate
+Pengaturan Identitas Restoran
+\end_layout
+
+\begin_layout Enumerate
+Pengaturan Cara Pembayaran (UANG MUKA, VOUCHER, dsb.)
+\end_layout
+
+\begin_layout Enumerate
+Pengaturan Login User dan Hak Akses
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Pengembang Restobiz
+\end_layout
+
+\begin_layout Paragraph
+Restobiz dikembangkan pertama kali oleh Indra Gunawan 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.indragunawan.com
+\end_layout
+
+\end_inset
+
+ dan didistribusikan melalui Intens Media Visitama (IMV).
+ IMV merupakan bidang usaha independen yang bergerak dalam jasa pendistribusian
+ dan pengenalan aplikasi open source di Indonesia.
+\end_layout
+
+\begin_layout Paragraph
+Pengembangan Restobiz dilakukan seluruhnya di atas lingkungan sistem operasi
+ Fedora dan Ubuntu (keluarga GNU/Linux).
+ Aplikasi ini telah sukses dijalankan di atas sistem operasi lain yang banyak
+ tersedia di pasaran seperti Microsoft Windows (2000, XP & Vista).
+\end_layout
+
+\begin_layout Paragraph
+Seluruh aplikasi yang digunakan untuk membangun aplikasi ini merupakan aplikasi
+ yang legal dan free.
+ Tahap desain database, menggunakan aplikasi eclipse dengan plugin Azzurri
+ Clay.
+ Kemudian seperti yang telah disebutkan sebelumnya, IDE NetBeans yang digunakan
+ untuk membangun aplikasi ini juga legal dan free.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Database Server menggunakan MySQL Server Community.
+ Pengolahan gambar dan icon yang digunakan aplikasi ini menggunakan Inkscape
+ dan GIMP (GNU Image Manipulation Program).
+ Untuk penulisan dokumentasi ini, digunakan aplikasi LyX yang berbasis LaTeX.
+\end_layout
+
+\begin_layout Paragraph
+Pesan yang ingin developer sampaikan adalah ajakan bagi kita semua untuk
+ memanfaatkan dengan maksimal aplikasi yang free dan legal seperti halnya
+ yang developer lakukan dalam mengembangkan aplikasi ini.
+\end_layout
+
+\begin_layout Chapter
+Persiapan
+\end_layout
+
+\begin_layout Section
+Kebutuhan Sistem
+\end_layout
+
+\begin_layout Paragraph
+Restobiz dapat berjalan di atas sistem operasi umum yang terdapat di pasaran.
+ Tidak masalah apakah anda menggunakan Windows, Linux, Solaris ataupun FreeBSD,
+ selama tersedia Java Runtime Environment (JRE) dan database MySQL Server
+ pada sistem operasi anda, maka anda dapat menjalankan aplikasi ini.
+\end_layout
+
+\begin_layout Paragraph
+Untuk memasang JRE pada sistem operasi anda, silahkan anda download di situs
+ Sun Microsystem 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.sun.com
+\end_layout
+
+\end_inset
+
+.
+ Untuk memasang MySQL dan GUI Tools-nya, silahkan anda download di situs
+ MySQL 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.mysql.com
+\end_layout
+
+\end_inset
+
+.
+ Jika anda mengalami kesulitan dalam mendapatkan file-file tersebut, anda
+ tidak perlu khawatir karena developer telah menyediakan semuanya didalam
+ CD distribusi aplikasi ini.
+\end_layout
+
+\begin_layout Subsection
+Spesifikasi Hardware
+\end_layout
+
+\begin_layout Paragraph
+Spesifikasi minimal hardware yang disarankan untuk menjalankan aplikasi
+ ini dengan optimal adalah sebagai berikut:
+\end_layout
+
+\begin_layout Itemize
+Prosessor sekelas Intel Pentium 4 keatas (termasuk Intel Celeron).
+\end_layout
+
+\begin_layout Itemize
+Memory minimal 512 MB untuk server dan 256 MB untuk client.
+\end_layout
+
+\begin_layout Itemize
+Kartu jaringan dan network switch (jika dipasang lebih dari satu PC).
+\end_layout
+
+\begin_layout Itemize
+Printer dotmatrix dan kertas billing (4.25 x 5.5 inch / 9.5 x 14 cm) untuk
+ pencetakan invoice (ukuran kertas billing dapat diatur melalui Server Propertie
+s printer anda).
+\end_layout
+
+\begin_layout Itemize
+(Alternate) Printer kasir dan kertas rol (membutuhkan konfigurasi tambahan
+ dan file report yang sudah dimodifikasi).
+\end_layout
+
+\begin_layout Itemize
+(Optional) Printer untuk pencetakan laporan.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Spesifikasi Software
+\end_layout
+
+\begin_layout Paragraph
+Sebagaimana telah disebutkan sebelumnya, spesifikasi software yang diperlukan
+ untuk menjalankan aplikasi ini adalah sebagai berikut:
+\end_layout
+
+\begin_layout Itemize
+Sistem Operasi (salah satu)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+FreeBSD, NetBSD, OpenBSD
+\end_layout
+
+\begin_layout Itemize
+GNU/Linux (Debian, Fedora, Mandriva, openSUSE, Ubuntu)
+\end_layout
+
+\begin_layout Itemize
+Microsoft Windows (2000, XP, Vista)
+\end_layout
+
+\begin_layout Itemize
+Solaris (OpenSolaris)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Java Runtime Environment (JRE)
+\end_layout
+
+\begin_layout Itemize
+MySQL 5.0 Community Server (Optional GUI Tools)
+\end_layout
+
+\begin_layout Subsection
+Spesifikasi Brainware
+\end_layout
+
+\begin_layout Paragraph
+Ini yang umumnya terlupakan, ketika anda membeli produk software biasanya
+ hanya tertera spesifikasi hardware minimum saja.
+ Padahal dalam banyak kasus, spesifikasi brainware (pengguna) juga tidak
+ kalah penting.
+\end_layout
+
+\begin_layout Paragraph
+Spesifikasi brainware yang direkomendasikan adalah sebagai berikut:
+\end_layout
+
+\begin_layout Itemize
+Jujur dan Dapat Dipercaya
+\end_layout
+
+\begin_layout Itemize
+Memiliki Keinginan Belajar Tinggi
+\end_layout
+
+\begin_layout Itemize
+Menguasai Komputer
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hapal posisi tombol keyboard
+\end_layout
+
+\begin_layout Itemize
+Bisa menggunakan mouse dengan lancar
+\end_layout
+
+\begin_layout Itemize
+Kenal dengan layout aplikasi secara umum
+\end_layout
+
+\begin_layout Itemize
+Paham akan fungsi control seperti Button, TextEdit, ComboBox, RadioButton,
+ CheckList, dsb.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cepat Tanggap dan Teliti
+\end_layout
+
+\begin_layout Paragraph
+Selebihnya merupakan kriteria yang dapat anda tentukan sendiri.
+\end_layout
+
+\begin_layout Chapter
+Installasi
+\end_layout
+
+\begin_layout Section
+Catatan Umum
+\end_layout
+
+\begin_layout Paragraph
+Proses installasi berikut yang akan digambarkan adalah proses installasi
+ pada sistem operasi Windows XP.
+ Karena sistem operasi tersebut masih merupakan sistem operasi yang paling
+ banyak digunakan pada saat ini.
+ Anda dapat menghubungi developer untuk tahapan installasi pada sistem operasi
+ lainnya.
+\end_layout
+
+\begin_layout Section
+Java Runtime Environment (JRE)
+\end_layout
+
+\begin_layout Paragraph
+Karena aplikasi ini berbasis Java, maka anda mutlak memerlukan JRE pada
+ sistem operasi anda.
+ Jika tidak, maka sistem operasi anda tidak dapat mengenali dan menjalankan
+ executable aplikasi ini.
+\end_layout
+
+\begin_layout Paragraph
+Installer JRE dapat anda temukan pada CD distribusi aplikasi ini dalam directory
+ jre.
+ Untuk membantu mengenalinya silahkan anda lihat pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:executable-installer-jre"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/jre-01.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Executable Installer JRE
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:executable-installer-jre"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Double klik pada icon tersebut untuk memulai installasi JRE.
+ Layar pertama installasi adalah sebagaimana dapat dilihat pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-jre-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/jre-02.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi JRE Langkah 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-jre-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Pada langkah ini anda diminta untuk menerima License Agreement untuk memasang
+ JRE pada sistem operasi anda.
+ Untuk melanjutkan ke tahap installasi, silahkan anda klik tombol 
+\begin_inset Quotes sld
+\end_inset
+
+Accept
+\begin_inset Quotes srd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Tahap installasi segera dimulai setelah anda menerima License Agreement
+ pada tahap pertama.
+ Progress installasi dapat anda pantau seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-jre-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/jre-03.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi JRE Langkah 2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-jre-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Tahapan ini tidak berlangsung lama, segera setelah proses tersebut selesai,
+ maka anda akan menemukan layar seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-jre-3"
+
+\end_inset
+
+.
+ Silahkan anda klik 
+\begin_inset Quotes sld
+\end_inset
+
+Finish
+\begin_inset Quotes srd
+\end_inset
+
+ untuk menutup layar terakhir.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/jre-04.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi JRE Langkah 3
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-jre-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Untuk memastikan installasi anda sukses, silahkan anda tekan kombinasi tombol
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Win+R
+\begin_inset Quotes srd
+\end_inset
+
+ atau navigasi menu melalui 
+\begin_inset Quotes sld
+\end_inset
+
+Start->Run
+\begin_inset Quotes srd
+\end_inset
+
+ dan ketikkan 
+\begin_inset Quotes sld
+\end_inset
+
+cmd
+\begin_inset Quotes srd
+\end_inset
+
+ tanpa tanda kutip dan tekan tombol 
+\begin_inset Quotes sld
+\end_inset
+
+OK
+\begin_inset Quotes srd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Pada command prompt, silahkan anda ketik 
+\begin_inset Quotes sld
+\end_inset
+
+java -version
+\begin_inset Quotes srd
+\end_inset
+
+ dan tekan tombol 
+\begin_inset Quotes sld
+\end_inset
+
+Enter
+\begin_inset Quotes srd
+\end_inset
+
+.
+ Jika anda mendapatkan hasil seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:verifikasi-installasi-jre"
+
+\end_inset
+
+, maka installasi JRE anda telah sukses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "basicstyle={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+C:
+\backslash
+Documents and Settings
+\backslash
+User>java -version
+\end_layout
+
+\begin_layout Plain Layout
+
+java version "1.6.0_07"
+\end_layout
+
+\begin_layout Plain Layout
+
+Java(TM) SE Runtime Environment (build 1.6.0_07-b06)
+\end_layout
+
+\begin_layout Plain Layout
+
+Java HotSpot(TM) Client VM (build 10.0-b23, mixed mode, sharing)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+C:
+\backslash
+Documents and Settings
+\backslash
+User>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Verifikasi Installasi JRE
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:verifikasi-installasi-jre"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+MySQL Community Server
+\end_layout
+
+\begin_layout Paragraph
+MySQL adalah database server open source yang paling populer.
+ MySQL digunakan hampir di seluruh website yang berbasis PHP dalam pengembangann
+ya.
+ Mulai versi 5.0 (yang digunakan aplikasi ini), kemampuan MySQL sudah jauh
+ lebih baik karena mendukung Trigger, View dan Stored Procedure.
+ Bahkan lebih 
+\begin_inset Quotes sld
+\end_inset
+
+manusiawi
+\begin_inset Quotes srd
+\end_inset
+
+ karena telah menyertakan GUI (Graphical User Interface) Tools.
+\end_layout
+
+\begin_layout Subsection
+MySQL Server
+\end_layout
+
+\begin_layout Paragraph
+Installasi MySQL Server pada prinsipnya sangat mudah dilakukan jika anda
+ memahami cara melakukan installasi aplikasi Windows secara umum.
+ Namun demikian, diperlukan sedikit konfigurasi agar server dapat berfungsi
+ dan digunakan oleh aplikasi ini.
+ Untuk memulai installasi, temukan installer MySQL pada CD distribusi didalam
+ directory mysql.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-01.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installer MySQL Server
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installer-mysql-server"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Jalankan installasi dengan melakukan double klik pada file installer (dalam
+ Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installer-mysql-server"
+
+\end_inset
+
+ nama file installer adalah 
+\begin_inset Quotes sld
+\end_inset
+
+mysql-5.0.67-win32.exe
+\begin_inset Quotes srd
+\end_inset
+
+).
+ Jika anda mendapatkan MySQL dengan cara mendownload dari situs MySQL, pastikan
+ anda mendownload untuk sistem operasi yang anda gunakan.
+ Jika yang anda peroleh file archieve ZIP, extract-lah terlebih dahulu sebelum
+ menjalankan setup.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Untuk selanjutnya, silahkan ikuti langkah installasi seperti pada petunjuk
+ berikut ini.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement bp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-02.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi MySQL Langkah 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-mysql-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Installasi diawali dengan 
+\begin_inset Quotes sld
+\end_inset
+
+Welcome Screen
+\begin_inset Quotes srd
+\end_inset
+
+ seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-mysql-1"
+
+\end_inset
+
+.
+ Lanjutkan ke layar berikutnya dengan mengklik 
+\begin_inset Quotes sld
+\end_inset
+
+Next
+\begin_inset Quotes srd
+\end_inset
+
+ hingga tampilan layar pilihan installasi pada seperti Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-mysql-2"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Pilih tipe installasi 
+\begin_inset Quotes sld
+\end_inset
+
+Complete
+\begin_inset Quotes srd
+\end_inset
+
+ pada langkah ini dan klik 
+\begin_inset Quotes sld
+\end_inset
+
+Next
+\begin_inset Quotes srd
+\end_inset
+
+ untuk melanjutkan ke langkah berikutnya.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-03.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi MySQL Langkah 2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-mysql-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Layar berikutnya hanya konfirmasi mengenai lokasi installasi dan tipe installasi.
+ Anda dapat langsung melakukan klik pada tombol 
+\begin_inset Quotes sld
+\end_inset
+
+Next
+\begin_inset Quotes srd
+\end_inset
+
+ untuk melanjutkan.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-04.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi MySQL Langkah 3
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-mysql-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proses installasi segera dimulai.
+ Anda dapat memantau progres installasi seperti terlihat pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-mysql-4"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-05.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi MySQL Langkah 4
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-mysql-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Layar terakhir pada tahap installasi MySQL adalah seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:installasi-mysql-5"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-06.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Installasi MySQL Langkah 5
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:installasi-mysql-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Pastikan status pilihan 
+\begin_inset Quotes sld
+\end_inset
+
+Configure the MySQL Server now
+\begin_inset Quotes srd
+\end_inset
+
+ tercentang karena kita akan segera melakukan konfigurasi server pada tahap
+ berikutnya.
+ Setelah ini dilakukan, silahkan anda klik 
+\begin_inset Quotes sld
+\end_inset
+
+Finish
+\begin_inset Quotes srd
+\end_inset
+
+ untuk menutup layar installasi.
+\end_layout
+
+\begin_layout Subsection
+Konfigurasi MySQL Server
+\end_layout
+
+\begin_layout Paragraph
+Tahap konfigurasi ini sangat penting dan hanya dilakukan satu kali setelah
+ installasi.
+ Jika anda mencentang pilihan 
+\begin_inset Quotes sld
+\end_inset
+
+Configure the MySQL Server now
+\begin_inset Quotes srd
+\end_inset
+
+ pada langkah sebelumnya, maka anda akan segera masuk ke layar konfigurasi
+ setelah proses installasi MySQL selesai.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-07.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Sama seperti installasi, layar pertama konfigurasi MySQL adalah 
+\begin_inset Quotes sld
+\end_inset
+
+Welcome Screen
+\begin_inset Quotes srd
+\end_inset
+
+.
+ Lanjutkan ke layar berikutnya hingga tampil pilihan konfigurasi seperti
+ pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:konfigurasi-mysql-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-08.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Pilih 
+\begin_inset Quotes sld
+\end_inset
+
+Detailed Configuration
+\begin_inset Quotes srd
+\end_inset
+
+ dan klik 
+\begin_inset Quotes sld
+\end_inset
+
+Next
+\begin_inset Quotes srd
+\end_inset
+
+ untuk melanjutkan ke pemilihan tipe server pada layar berikutnya.
+ Pilih tipe server 
+\begin_inset Quotes sld
+\end_inset
+
+Developer Machine
+\begin_inset Quotes srd
+\end_inset
+
+ seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:konfigurasi-mysql-3"
+
+\end_inset
+
+ jika anda menginstall MySQL di PC atau Notebook.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Jika anda menginstall MySQL pada mesin Server, pilih tipe server 
+\begin_inset Quotes sld
+\end_inset
+
+Server Machine
+\begin_inset Quotes srd
+\end_inset
+
+.
+ Pilihan terakhir adalah pilihan jika anda bermaksud menginstall MySQL pada
+ sebuah Server yang anda khususkan untuk MySQL saja (tidak digabung dengan
+ aplikasi server lainnya).
+ Selanjutnya klik 
+\begin_inset Quotes sld
+\end_inset
+
+Next
+\begin_inset Quotes srd
+\end_inset
+
+ untuk berpindah ke layar berikutnya.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-09.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 3
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Pilih 
+\begin_inset Quotes sld
+\end_inset
+
+Multifunctional Database
+\begin_inset Quotes srd
+\end_inset
+
+ pada layar berikutnya untuk pilihan penggunaan database seperti pada Gambar
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:konfigurasi-mysql-4"
+
+\end_inset
+
+.
+ Hal ini dilakukan karena kita menggunakan skema multifungsi dalam menggunakan
+ database tersebut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-10.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 4
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Layar berikutnya adalah pemilihan lokasi InnoDB datafile dan sangat disarankan
+ agar anda tetap membiarkan pilihan ini secara default.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-11.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 5
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Kemudian selanjutnya anda akan diminta untuk memilih (dan memperkirakan)
+ berapa koneksi maksimum yang bisa dilakukan dalam satu waktu ke server.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Dalam Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:konfigurasi-mysql-6"
+
+\end_inset
+
+ pilihan defaultnya adalah 
+\begin_inset Quotes sld
+\end_inset
+
+Decission Support (DSS)/OLAP
+\begin_inset Quotes srd
+\end_inset
+
+ dengan asumsi koneksi maksimum sebanyak 20 koneksi.
+ Sekali lagi, disarankan agar anda membiarkan pilihan ini secara default
+ terkecuali anda sangat paham dengan apa yang anda lakukan dalam langkah
+ ini.
+ Klik 
+\begin_inset Quotes sld
+\end_inset
+
+Next
+\begin_inset Quotes srd
+\end_inset
+
+ untuk langkah selanjutnya.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-12.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 6
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Dalam langkah berikutnya, ada satu hal penting yang perlu anda lakukan.
+ Perhatikan Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:konfigurasi-mysql-7"
+
+\end_inset
+
+ dan pastikan bahwa checklist 
+\begin_inset Quotes sld
+\end_inset
+
+Add firewall exception for this port
+\begin_inset Quotes srd
+\end_inset
+
+ dicentang.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Port 3306 adalah port default MySQL agar bisa diakses melalui protokol TCP/IP.
+ Dengan memberikan centang pada opsi ini, maka port 3306 pada firewall akan
+ dibuka dan server anda siap menerima koneksi melalui port 3306 dari luar.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-13.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 7
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Untuk layar berikutnya seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:konfigurasi-mysql-8"
+
+\end_inset
+
+ dapat anda abaikan dengan memberikan pilihan default.
+ Layar ini menanyakan default character set yang ingin digunakan.
+ 99% dijamin anda tidak perlu mengubah settingan ini.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-14.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 8
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-8"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Pada layar selanjutnya sebaiknya anda centang pilihan 
+\begin_inset Quotes sld
+\end_inset
+
+Include Bin Directory in Windows PATH
+\begin_inset Quotes srd
+\end_inset
+
+ agar executable MySQL dapat diakses dari seluruh path pada system anda.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-15.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 9
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+langkah berikutnya anda masukan password yang anda kehendaki untuk user
+ 
+\begin_inset Quotes sld
+\end_inset
+
+root
+\begin_inset Quotes srd
+\end_inset
+
+.
+ Harap pilih password yang terbaik untuk akun user 
+\begin_inset Quotes sld
+\end_inset
+
+root
+\begin_inset Quotes srd
+\end_inset
+
+ ini karena hak akses user ini adalah hak akses tertinggi di database.
+ Pilihan 
+\begin_inset Quotes sld
+\end_inset
+
+Enable root access from remote machines
+\begin_inset Quotes srd
+\end_inset
+
+ dan 
+\begin_inset Quotes sld
+\end_inset
+
+Create An Anonymous Account
+\begin_inset Quotes srd
+\end_inset
+
+ sebaiknya di nonaktifkan untuk lebih meningkatkan keamanan.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/mysql-16.png
+	lyxscale 80
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 10
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-10"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Ok, langkah konfigurasi telah selesai.
+ Pada layar berikutnya, pilih 
+\begin_inset Quotes sld
+\end_inset
+
+Execute
+\begin_inset Quotes srd
+\end_inset
+
+ untuk menyimpan dan mengaktifkan konfigurasi.
+ Pada akhir dialog, silahkan tutup dengan klik 
+\begin_inset Quotes sld
+\end_inset
+
+Finish
+\begin_inset Quotes srd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshots/mysql-17.png
+	lyxscale 80
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename screenshots/mysql-18.png
+	lyxscale 80
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Konfigurasi MySQL Langkah 11
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:konfigurasi-mysql-11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Installasi Restobiz
+\end_layout
+
+\begin_layout Paragraph
+Restobiz tidak memiliki installer, paket distribusinya hanya berupa arsip
+ file ZIP.
+ File arsip ini dapat dibuka langsung oleh sistem operasi Windows tanpa
+ harus menginstall aplikasi tambahan.
+ Sebelum membuka file arsip Restobiz, anda harus mempersiapkan catalog database
+ MySQL yang akan digunakan oleh Restobiz.
+\end_layout
+
+\begin_layout Subsection
+Persiapan Catalog Database
+\end_layout
+
+\begin_layout Paragraph
+Catalog adalah tempat penyimpanan data pada database server yang digunakan
+ (MySQL).
+ Sebuah database server dapat berisi lebih dari satu catalog yang masing-masing
+ catalog digunakan oleh aplikasi yang berbeda.
+\end_layout
+
+\begin_layout Paragraph
+Restobiz, sebagai salah satu aplikasi yang menggunakan database server MySQL
+ juga memerlukan sebuah catalog pada database server yang akan digunakan
+ sebagai penyimpanan data aplikasi ini.
+ Langkah untuk membuat catalog ini dapat dilakukan dengan cara berikut:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement b
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/restobiz-01.png
+	lyxscale 80
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+MySQL Command Line Client
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MySQL-Command-Line"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Jalankan 
+\begin_inset Quotes sld
+\end_inset
+
+MySQL Command Line Client
+\begin_inset Quotes srd
+\end_inset
+
+ dari menu Start anda.
+ Anda dapat menemukan executable perintah ini dengan mengikuti petunjuk
+ pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MySQL-Command-Line"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Anda akan diminta untuk memasukan password 
+\begin_inset Quotes sld
+\end_inset
+
+root
+\begin_inset Quotes srd
+\end_inset
+
+ MySQL.
+ Password ini adalah password yang anda set pada langkah installasi MySQL.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/restobiz-02.png
+	lyxscale 80
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Login ke MySQL Server
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Login-ke-MySQL"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Jika password yang anda masukan benar, maka anda akan berada pada MySQL
+ prompt.
+ Untuk membuat catalog yang akan digunakan oleh aplikasi ini, ketikan perintah
+ ini pada prompt: 
+\shape italic
+
+\begin_inset Quotes sld
+\end_inset
+
+create database nama_database;
+\begin_inset Quotes srd
+\end_inset
+
+
+\shape default
+ (tanpa tanda kutip) kemudian tekan tombol ENTER.
+ Perhatikan Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Create-Database-(Catalog)"
+
+\end_inset
+
+ sebagai contoh.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/restobiz-03.png
+	lyxscale 80
+	scale 30
+
+\end_inset
+
+bar 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Create Database (Catalog) MySQL
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Create-Database-(Catalog)"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Setelah sukses, ketikan: 
+\shape italic
+
+\begin_inset Quotes sld
+\end_inset
+
+quit;
+\begin_inset Quotes srd
+\end_inset
+
+
+\shape default
+ (tanpa tanda kutip) seperti pada Gambar 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Keluar-dari-MySQL"
+
+\end_inset
+
+ untuk keluar dari MySQL prompt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename screenshots/restobiz-04.png
+	lyxscale 80
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Keluar dari MySQL Prompt
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Keluar-dari-MySQL"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="menuTabelMenu">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="menuTabelMenu" noResource="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="ubahKelompokMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="ubahKelompokMenu" methodName="ubahKelompokMenu"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="ubahKelompokMenuItem.text"/>
+            <Property name="name" type="java.lang.String" value="ubahKelompokMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="ubahNamaMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="ubahNamaMenu" methodName="ubahNamaMenu"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="ubahNamaMenuItem.text"/>
+            <Property name="name" type="java.lang.String" value="ubahNamaMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="ubahHargaMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="ubahHargaMenu" methodName="ubahHargaMenu"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="ubahHargaMenuItem.text"/>
+            <Property name="name" type="java.lang.String" value="ubahHargaMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="ubahSatuanMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="ubahSatuanMenu" methodName="ubahSatuanMenu"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="ubahSatuanMenuItem.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="ubahSatuanMenuItem.toolTipText"/>
+            <Property name="name" type="java.lang.String" value="ubahSatuanMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+        <Component class="javax.swing.JSeparator" name="menuSeparator">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="menuSeparator" noResource="true"/>
+          </Properties>
+        </Component>
+        <MenuItem class="javax.swing.JMenuItem" name="nonPajakMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="ubahNonPajakItem" methodName="ubahNonPajakItem"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="nonPajakMenuItem.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="nonPajakMenuItem.toolTipText"/>
+            <Property name="name" type="java.lang.String" value="nonPajakMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="nonAktifMenuItem">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="ubahAktifMenu" methodName="ubahAktifMenu"/>
+            </Property>
+            <Property name="name" type="java.lang.String" value="nonAktifMenuItem" noResource="true"/>
+          </Properties>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="name" type="java.lang.String" value="menuEdit" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="headerPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="footerPanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="contentPanel" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="headerPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="contentPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="footerPanel" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="headerPanel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" resourceKey="headerPanel.background"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="headerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="12" pref="12" max="12" attributes="0"/>
+                          <Component id="subHeaderLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="headerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="229" max="32767" attributes="0"/>
+                  <Component id="menuImageLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="headerLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="subHeaderLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="menuImageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="headerLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="headerLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="headerLabel.text"/>
+            <Property name="name" type="java.lang.String" value="headerLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="subHeaderLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="subHeaderLabel.text"/>
+            <Property name="name" type="java.lang.String" value="subHeaderLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="menuImageLabel">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="menuImageLabel.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="menuImageLabel.text"/>
+            <Property name="name" type="java.lang.String" value="menuImageLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="footerPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="footerPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="warningLabel" pref="553" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cetakButton" linkSize="4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tutupButton" linkSize="4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cetakButton" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tutupButton" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="warningLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="tutupButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEdit" id="closeMenuEdit" methodName="closeMenuEdit"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="84"/>
+            <Property name="name" type="java.lang.String" value="tutupButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tutupButtonKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="warningLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="warningLabel.text"/>
+            <Property name="name" type="java.lang.String" value="warningLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="cetakButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="cetakMenu" methodName="cetakMenu"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="67"/>
+            <Property name="text" type="java.lang.String" resourceKey="cetakButton.text"/>
+            <Property name="name" type="java.lang.String" value="cetakButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cetakButtonKeyPressed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="contentPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="contentPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="menuScrollPane" alignment="0" pref="651" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="namaLabel" alignment="0" max="32767" attributes="3"/>
+                              <Component id="kelompokLabel" alignment="0" pref="63" max="32767" attributes="3"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="kelompokField" pref="210" max="32767" attributes="1"/>
+                              <Component id="namaField" alignment="0" pref="210" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="hargaLabel" max="32767" attributes="3"/>
+                              <Component id="baruCheckBox" alignment="0" pref="55" max="32767" attributes="1"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="hargaField" pref="95" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="satuanLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="kelompokBaruField" alignment="0" pref="147" max="32767" attributes="1"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="satuanField" min="-2" pref="68" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="tambahButton" min="-2" max="-2" attributes="1"/>
+                              </Group>
+                              <Component id="nonPajakField" max="32767" attributes="1"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="kelompokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="kelompokField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nonPajakField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="kelompokBaruField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="baruCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tambahButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="satuanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="satuanField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="hargaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="namaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="namaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="hargaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="menuScrollPane" pref="180" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="kelompokLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="75"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="kelompokField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="kelompokLabel.text"/>
+            <Property name="name" type="java.lang.String" value="kelompokLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="namaLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="77"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="namaField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="namaLabel.text"/>
+            <Property name="name" type="java.lang.String" value="namaLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="namaField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="namaField.text"/>
+            <Property name="name" type="java.lang.String" value="namaField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="namaFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="hargaLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="72"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="hargaField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="hargaLabel.text"/>
+            <Property name="name" type="java.lang.String" value="hargaLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="hargaField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="hargaField.text"/>
+            <Property name="name" type="java.lang.String" value="hargaField" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="hargaFieldKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="tambahButton">
+          <Properties>
+            <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
+              <action class="com.indragunawan.restobiz.app.MenuEditView" id="tambahMenu" methodName="tambahMenu"/>
+            </Property>
+            <Property name="mnemonic" type="int" value="97"/>
+            <Property name="name" type="java.lang.String" value="tambahButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tambahButtonKeyPressed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="menuScrollPane">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="menuScrollPane" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="menuTable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="7" rowCount="0">
+                    <Column editable="true" title="Menu" type="java.lang.Integer"/>
+                    <Column editable="true" title="Kelompok" type="java.lang.String"/>
+                    <Column editable="true" title="Nama" type="java.lang.String"/>
+                    <Column editable="true" title="Harga" type="java.lang.Double"/>
+                    <Column editable="true" title="Satuan" type="java.lang.String"/>
+                    <Column editable="true" title="Pajak" type="java.lang.Object"/>
+                    <Column editable="true" title="Status" type="java.lang.Boolean"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="50" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title0"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="80" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title1"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title2"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title3"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="50" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title5"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="50" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title6"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="50" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title resourceKey="menuTable.columnModel.title4"/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="name" type="java.lang.String" value="menuTable" noResource="true"/>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="menuTableMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="satuanLabel">
+          <Properties>
+            <Property name="displayedMnemonic" type="int" value="83"/>
+            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="satuanField"/>
+            </Property>
+            <Property name="text" type="java.lang.String" resourceKey="satuanLabel.text"/>
+            <Property name="name" type="java.lang.String" value="satuanLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="satuanField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="satuanField.text"/>
+            <Property name="name" type="java.lang.String" value="satuanField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="nonPajakField">
+          <Properties>
+            <Property name="mnemonic" type="int" value="78"/>
+            <Property name="text" type="java.lang.String" resourceKey="nonPajakField.text"/>
+            <Property name="name" type="java.lang.String" value="nonPajakField" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="kelompokField">
+          <Properties>
+            <Property name="editable" type="boolean" value="true"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="MAKANAN"/>
+                <StringItem index="1" value="MINUMAN"/>
+              </StringArray>
+            </Property>
+            <Property name="doubleBuffered" type="boolean" value="true"/>
+            <Property name="name" type="java.lang.String" value="kelompokField" noResource="true"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="enabled" source="baruCheckBox" sourcePath="${!selected}" target="kelompokField" targetPath="enabled" updateStrategy="0" immediately="false"/>
+          </BindingProperties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="baruCheckBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="baruCheckBox.text"/>
+            <Property name="name" type="java.lang.String" value="baruCheckBox" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="kelompokBaruField">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="kelompokBaruField.text"/>
+            <Property name="name" type="java.lang.String" value="kelompokBaruField" noResource="true"/>
+          </Properties>
+          <BindingProperties>
+            <BindingProperty name="enabled" source="baruCheckBox" sourcePath="${selected}" target="kelompokBaruField" targetPath="enabled" updateStrategy="0" immediately="false"/>
+          </BindingProperties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

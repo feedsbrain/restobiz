@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="invoice"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="184"
+		 pageHeight="396"
+		 columnWidth="170"
+		 columnSpacing="0"
+		 leftMargin="7"
+		 rightMargin="7"
+		 topMargin="14"
+		 bottomMargin="14"
+		 whenNoDataType="BlankPage"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false"
+		 isIgnorePagination="true">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Invoice"
+		isDefault="true"
+		fontName="Courier New"
+		pdfFontName="Courier"
+	>
+	</style>
+
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="NOMOR_INVOICE" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="TANGGAL_INVOICE" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="RESTOBIZ_COMPANY" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Resto Business"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_BUSINESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["Restaurant"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_ADDRESS" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["http://www.indragunawan.com"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_PHONE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["(0541) 9113812, 08195401930"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RESTOBIZ_MESSAGE" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT 
+  CASE WHEN (dt.berat>0) THEN CONCAT(m.nama,' (x',dt.jumlah,')') ELSE m.nama END AS nama,
+  CASE WHEN (dt.berat>0) THEN dt.berat ELSE dt.jumlah END AS jumlah,
+  dt.harga,
+  dt.berat
+FROM detiltransaksi dt 
+INNER JOIN menu m ON dt.menu = m.menu 
+WHERE dt.nomor = $P{NOMOR_INVOICE} AND dt.tanggal = $P{TANGGAL_INVOICE}]]></queryString>
+
+	<field name="nama" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Double"/>
+	<field name="harga" class="java.lang.Float"/>
+	<field name="berat" class="java.lang.Float"/>
+
+
+		<group  name="menu" isStartNewPage="true" minHeightToStartNewPage="10" >
+			<groupExpression><![CDATA[new Boolean($V{menu_COUNT}.intValue() > 15)]]></groupExpression>
+			<groupHeader>
+			<band height="1"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="2"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="45"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="18"
+						y="10"
+						width="0"
+						height="0"
+						key="staticText-1"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Static Text]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="10"
+						width="170"
+						height="13"
+						key="textField-7"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Courier-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_COMPANY}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="0"
+						width="170"
+						height="10"
+						key="textField-8"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_BUSINESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="23"
+						width="170"
+						height="10"
+						key="textField-9"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="33"
+						width="170"
+						height="10"
+						key="textField-10"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_PHONE}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="36"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="1"
+						width="170"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						x="0"
+						y="34"
+						width="170"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<subreport  isUsingCache="true">
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="4"
+						width="170"
+						height="26"
+						key="subreport-7"/>
+					<subreportParameter  name="NOMOR_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{NOMOR_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="TANGGAL_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{TANGGAL_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "invoiceheader.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="20"  isSplitAllowed="true" >
+				<elementGroup><!--  Start: 1 !-->
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="125"
+						y="10"
+						width="45"
+						height="10"
+						key="textField-14"
+						positionType="Float"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[new java.lang.Float(  ($F{jumlah}.floatValue()) *($F{harga}.floatValue()) )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0;(#,##0)" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="32"
+						y="10"
+						width="42"
+						height="10"
+						key="textField-15"
+						positionType="Float"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Float"><![CDATA[$F{harga}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="92"
+						y="10"
+						width="25"
+						height="10"
+						key="textField-16"
+						positionType="Float"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{jumlah}]]></textFieldExpression>
+				</textField>
+				</elementGroup><!-- End 1 !-->
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="0"
+						width="170"
+						height="10"
+						key="textField-17"
+						positionType="Float"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Invoice"
+						x="75"
+						y="10"
+						width="16"
+						height="10"
+						key="staticText-16"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[X]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="16"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="6"
+						width="170"
+						height="10"
+						key="textField-11"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Courier" size="8" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{RESTOBIZ_MESSAGE}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="2"
+						width="170"
+						height="0"
+						key="line-5"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+</graphicElement>
+				</line>
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="85"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="2"
+						width="170"
+						height="0"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<subreport  isUsingCache="true">
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="50"
+						width="170"
+						height="17"
+						key="subreport-4"/>
+					<subreportParameter  name="NOMOR_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{NOMOR_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="TANGGAL_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{TANGGAL_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "invoicestatus.jasper"]]></subreportExpression>
+				</subreport>
+				<line direction="TopDown">
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="69"
+						width="170"
+						height="0"
+						key="line-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</line>
+				<staticText>
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="71"
+						width="170"
+						height="14"
+						key="staticText-15"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[:: Restobiz :: Restaurant POS]]></text>
+				</staticText>
+				<subreport  isUsingCache="true">
+					<reportElement
+						style="Invoice"
+						x="89"
+						y="5"
+						width="81"
+						height="39"
+						key="subreport-5"
+						stretchType="RelativeToBandHeight"/>
+					<subreportParameter  name="NOMOR_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{NOMOR_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="TANGGAL_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{TANGGAL_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "invoicesummary.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						style="Invoice"
+						x="0"
+						y="5"
+						width="81"
+						height="39"
+						key="subreport-6"
+						stretchType="RelativeToBandHeight"/>
+					<subreportParameter  name="NOMOR_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{NOMOR_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="TANGGAL_INVOICE">
+						<subreportParameterExpression><![CDATA[$P{TANGGAL_INVOICE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "invoicepayment.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>
